@@ -30,3 +30,5 @@ app.listen(constants.PORT, err => {
     );
   }
 });
+
+export default app;

@@ -9,7 +9,7 @@ import constants from '../config/constants';
 const isProd = process.env.NODE_ENV === 'production';
 
 // eslint-disable-next-line no-unused-vars
-export default function errorHandler(err, req, res, next) {
+export default function logErrorService(err, req, res, next) {
   if (!err) {
     return res.sendStatus(500);
   }

@@ -7,12 +7,12 @@ import { Router } from 'express';
 import UserRoutes from './user.routes';
 
 // Middlewares
-import errorHandler from '../services/log';
+import logErrorService from '../services/log';
 
 const routes = new Router();
 
 routes.use('/users', UserRoutes);
 
-routes.use(errorHandler);
+routes.use(logErrorService);
 
 export default routes;

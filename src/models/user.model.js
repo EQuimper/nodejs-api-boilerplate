@@ -24,9 +24,19 @@ const UserSchema = new Schema(
         message: '{VALUE} is not a valid email!',
       },
     },
+    name: {
+      type: String,
+      trim: true,
+    },
+    username: {
+      type: String,
+      trim: true,
+      unique: true,
+    },
     password: {
       type: String,
       required: [true, 'Password is required!'],
+      trim: true,
     },
   },
   { timestamps: true },

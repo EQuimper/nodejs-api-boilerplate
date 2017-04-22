@@ -4,8 +4,9 @@
 
 import { Router } from 'express';
 
-import UserController from '../controllers/user.controller';
-import AuthenticationController from '../controllers/authentication.controller';
+import * as UserController from '../controllers/user.controller';
+import * as AuthenticationController
+  from '../controllers/authentication.controller';
 import { authLocal } from '../services/auth';
 
 const routes = new Router();

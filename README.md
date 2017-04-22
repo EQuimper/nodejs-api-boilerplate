@@ -41,6 +41,16 @@ or
 npm run dev:debug
 ```
 
+## Techs
+
+- [Helmet](https://github.com/helmetjs/helmet)
+- [Cors](https://github.com/expressjs/cors)
+- [Body-Parser](https://github.com/expressjs/body-parser)
+- [Morgan](https://github.com/expressjs/morgan)
+- [PassportJS](https://github.com/jaredhanson/passport)
+- [Passport-Local](https://github.com/jaredhanson/passport-local)
+- [Passport-JWT](https://github.com/themikenicholson/passport-jwt)
+
 ## Todo
 
 ### Add

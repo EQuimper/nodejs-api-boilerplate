@@ -33,25 +33,34 @@
     "lint": "eslint src",
     "lint:fix": "eslint --fix src",
     "build": "yarn run clean && babel --out-dir=dist ./src",
-    "clean": "rimraf dist"
+    "clean": "rimraf dist",
+    "test": "NODE_ENV=test mocha --recursive --reporter spec --compilers js:babel-register tests",
+    "test:watch": "nodemon --exec 'yarn test' tests"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-preset-env": "^1.4.0",
+    "babel-register": "^6.24.1",
+    "chai": "^3.5.0",
     "cross-env": "^4.0.0",
     "eslint": "^3.19.0",
     "eslint-config-equimper": "^1.6.3",
+    "faker": "^4.1.0",
+    "mocha": "^3.2.0",
     "morgan": "^1.8.1",
     "nodemon": "^1.11.0",
-    "rimraf": "^2.6.1"
+    "rimraf": "^2.6.1",
+    "superagent": "^3.5.2"
   },
   "dependencies": {
     "bcrypt": "^1.0.2",
     "body-parser": "^1.17.1",
     "compression": "^1.6.2",
+    "cors": "^2.8.3",
     "dotenv": "^4.0.0",
     "express": "^4.15.2",
+    "helmet": "^3.5.0",
     "jsonwebtoken": "^7.3.0",
     "mongoose": "^4.9.5",
     "mongoose-unique-validator": "^1.0.5",
