@@ -1,6 +1,12 @@
+/**
+ * API Routes
+ */
+
 import { Router } from 'express';
 
 import UserRoutes from './user.routes';
+
+// Middlewares
 import errorHandler from '../middlewares/error-handler';
 
 const routes = new Router();

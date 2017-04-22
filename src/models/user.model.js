@@ -55,8 +55,32 @@ UserSchema.pre('save', function (next) {
 // User methods on each
 
 UserSchema.methods = {
+  /**
+   * Hash the user password
+   *
+   * @private
+   * @param {String} password
+   * @param {Number} saltRounds
+   * @param {Function} cb
+   * @returns {String} hash password
+   */
   _hashPassword(password, saltRounds, cb) {
     return hash(password, saltRounds, cb);
+  },
+
+  /**
+   * Generate a jwt token for authentication
+   *
+   * @public
+   * @returns {String} JWT token
+   */
+  createToken() {
+    return jwt.sign(
+      {
+        _id: this._id,
+      },
+      constants.JWT_SECRET,
+    );
   },
 };
 
