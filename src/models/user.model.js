@@ -33,11 +33,10 @@ const UserSchema = new Schema(
 );
 
 UserSchema.plugin(uniqueValidator, {
-  message: '{PATH} {VALUE} is already taken!',
+  message: '{VALUE} is already taken!',
 });
 
 // Hash the user password on creation
-
 UserSchema.pre('save', function (next) {
   if (this.isModified('password')) {
     return this._hashPassword(
@@ -51,8 +50,6 @@ UserSchema.pre('save', function (next) {
   }
   return next();
 });
-
-// User methods on each
 
 UserSchema.methods = {
   /**
