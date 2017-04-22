@@ -7,7 +7,7 @@ import { Router } from 'express';
 import UserRoutes from './user.routes';
 
 // Middlewares
-import errorHandler from '../middlewares/error-handler';
+import errorHandler from '../services/log';
 
 const routes = new Router();
 

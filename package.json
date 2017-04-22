@@ -26,12 +26,13 @@
   "license": "MIT",
   "version": "0.0.1",
   "scripts": {
+    "start": "yarn build && cross-env NODE_ENV=production  node dist",
     "dev": "cross-env NODE_ENV=development nodemon dist",
     "dev:debug": "cross-env NODE_ENV=development MONGOOSE_DEBUG=true DEBUG=express:* nodemon dist",
     "dev:watch": "babel -w --out-dir=dist ./src",
     "lint": "eslint src",
     "lint:fix": "eslint --fix src",
-    "build": "yarn run clean && build",
+    "build": "yarn run clean && babel --out-dir=dist ./src",
     "clean": "rimraf dist"
   },
   "devDependencies": {
@@ -57,6 +58,7 @@
     "passport": "^0.3.2",
     "passport-jwt": "^2.2.1",
     "passport-local": "^1.0.0",
+    "raven": "^1.2.1",
     "validator": "^7.0.0"
   }
 }

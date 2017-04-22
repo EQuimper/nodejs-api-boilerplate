@@ -13,6 +13,7 @@ const testConfig = {
 const prodConfig = {
   JWT_SECRET: process.env.JWT_SECRET,
   MONGO_URL: process.env.MONGO_URL,
+  RAVEN_ID: process.env.RAVEN_ID,
 };
 
 const defaultConfig = {

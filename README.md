@@ -7,6 +7,7 @@
   ```
   MONGO_URL=yourmongodb
   JWT_SECRET=yoursecret
+  RAVEN_ID=yourapikey
   ```
 3.
 
@@ -44,6 +45,6 @@ npm run dev:debug
 
 ### Add
 
-- Raven Log
+- [x] Raven Log
 - Sendgrid or Other Mail supply
 - Add S3 for user image
