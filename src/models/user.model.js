@@ -3,7 +3,7 @@
  */
 
 import mongoose, { Schema } from 'mongoose';
-import { hash } from 'bcrypt';
+import { hash, compareSync } from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import { isEmail } from 'validator';
 import uniqueValidator from 'mongoose-unique-validator';
@@ -52,6 +52,16 @@ UserSchema.pre('save', function (next) {
 });
 
 UserSchema.methods = {
+  /**
+   * Authenticate the user
+   *
+   * @public
+   * @param {String} password
+   * @returns {Boolean} password match
+   */
+  authenticateUser(password) {
+    return compareSync(password, this.password);
+  },
   /**
    * Hash the user password
    *

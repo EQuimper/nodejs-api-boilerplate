@@ -54,6 +54,9 @@
     "jsonwebtoken": "^7.3.0",
     "mongoose": "^4.9.5",
     "mongoose-unique-validator": "^1.0.5",
+    "passport": "^0.3.2",
+    "passport-jwt": "^2.2.1",
+    "passport-local": "^1.0.0",
     "validator": "^7.0.0"
   }
 }
