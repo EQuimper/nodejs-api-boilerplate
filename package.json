@@ -53,6 +53,7 @@
     "express": "^4.15.2",
     "jsonwebtoken": "^7.3.0",
     "mongoose": "^4.9.5",
+    "mongoose-unique-validator": "^1.0.5",
     "validator": "^7.0.0"
   }
 }

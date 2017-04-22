@@ -6,6 +6,7 @@ import mongoose, { Schema } from 'mongoose';
 import { hash } from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import { isEmail } from 'validator';
+import uniqueValidator from 'mongoose-unique-validator';
 
 import constants from '../config/constants';
 
@@ -14,22 +15,26 @@ const UserSchema = new Schema(
     email: {
       type: String,
       unique: true,
-      required: [true, 'Email is required'],
+      required: [true, 'Email is required!'],
       trim: true,
       validate: {
         validator(email) {
           return isEmail(email);
         },
-        message: '{VALUE} is not a valid email',
+        message: '{VALUE} is not a valid email!',
       },
     },
     password: {
       type: String,
-      required: [true, 'Password is required'],
+      required: [true, 'Password is required!'],
     },
   },
   { timestamps: true },
 );
+
+UserSchema.plugin(uniqueValidator, {
+  message: '{PATH} {VALUE} is already taken!',
+});
 
 // Hash the user password on creation
 
