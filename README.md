@@ -2,6 +2,8 @@
 
 ## Usage
 
+For get raven log create account here: [Sentry](https://sentry.io/)
+
 1. Install dependencies `yarn` or `npm i`
 2. Create a `.env` file in the root like
   ```
@@ -50,6 +52,7 @@ npm run dev:debug
 - [PassportJS](https://github.com/jaredhanson/passport)
 - [Passport-Local](https://github.com/jaredhanson/passport-local)
 - [Passport-JWT](https://github.com/themikenicholson/passport-jwt)
+- [Raven](https://github.com/getsentry/raven-node)
 
 ## Todo
 
