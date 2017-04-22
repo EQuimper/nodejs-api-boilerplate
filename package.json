@@ -27,6 +27,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon dist",
+    "dev:debug": "cross-env NODE_ENV=development DEBUG=express:*,mongoose nodemon dist",
     "dev:watch": "babel -w --out-dir=dist ./src",
     "lint": "eslint src",
     "lint:fix": "eslint --fix src",

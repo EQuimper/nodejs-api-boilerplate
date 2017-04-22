@@ -9,3 +9,33 @@
   JWT_SECRET=yoursecret
   ```
 3.
+
+## Scripts
+
+### DEV
+
+First thing you want to start babel to compile the project by doing `yarn dev:watch` or `npm run dev:watch`
+
+After
+
+```
+yarn dev
+```
+
+or
+
+```
+npm run dev
+```
+
+#### DEV-DEBUG
+
+```
+yarn dev:debug
+```
+
+or
+
+```
+npm run dev:debug
+```

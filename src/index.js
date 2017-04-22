@@ -1,6 +1,8 @@
 /* eslint-disable no-console */
 
 import express from 'express';
+
+import './config/database';
 import constants from './config/constants';
 
 const app = express();
