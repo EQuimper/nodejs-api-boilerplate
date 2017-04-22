@@ -39,3 +39,11 @@ or
 ```
 npm run dev:debug
 ```
+
+## Todo
+
+### Add
+
+- Raven Log
+- Sendgrid or Other Mail supply
+- Add S3 for user image

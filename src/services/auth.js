@@ -2,8 +2,8 @@ import passport from 'passport';
 import LocalStrategy from 'passport-local';
 import { Strategy as JWTStrategy, ExtractJwt } from 'passport-jwt';
 
-import User from '../../models/user.model';
-import constants from '../../config/constants';
+import User from '../models/user.model';
+import constants from '../config/constants';
 
 /**
  * Local Strategy Auth
@@ -17,13 +17,9 @@ const localLogin = new LocalStrategy(
       const user = await User.findOne({ email });
 
       if (!user) {
-        return done(null, false, {
-          message: 'Email not used, create an account first!',
-        });
+        return done(null, false);
       } else if (!user.authenticateUser(password)) {
-        return done(null, false, {
-          message: 'Your login details could not be verified. Please try again.',
-        });
+        return done(null, false);
       }
 
       return done(null, user);
@@ -59,3 +55,6 @@ const jwtLogin = new JWTStrategy(jwtOpts, async (payload, done) => {
 
 passport.use(localLogin);
 passport.use(jwtLogin);
+
+export const authLocal = passport.authenticate('local', { session: false });
+export const authJwt = passport.authenticate('jwt', { session: false });
