@@ -2,7 +2,6 @@
 
 /**
  * Configuration for the database
- *
  */
 
 import mongoose from 'mongoose';
@@ -17,4 +16,6 @@ mongoose.connect(constants.MONGO_URL);
 
 mongoose.connection
   .once('open', () => console.log('MongoDB Running'))
-  .on('error', e => console.error(e));
+  .on('error', e => {
+    throw e;
+  });

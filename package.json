@@ -41,11 +41,13 @@
     "cross-env": "^4.0.0",
     "eslint": "^3.19.0",
     "eslint-config-equimper": "^1.6.3",
+    "morgan": "^1.8.1",
     "nodemon": "^1.11.0",
     "rimraf": "^2.6.1"
   },
   "dependencies": {
     "body-parser": "^1.17.1",
+    "compression": "^1.6.2",
     "dotenv": "^4.0.0",
     "express": "^4.15.2",
     "mongoose": "^4.9.5"
