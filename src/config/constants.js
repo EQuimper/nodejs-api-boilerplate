@@ -17,6 +17,7 @@ const prodConfig = {
 
 const defaultConfig = {
   PORT: process.env.PORT || 3000,
+  SALT_ROUND: 10,
 };
 
 function envConfig(env) {

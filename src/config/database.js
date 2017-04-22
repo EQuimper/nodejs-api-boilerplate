@@ -11,6 +11,9 @@ import constants from './constants';
 // Remove the warning with Promise
 mongoose.Promise = global.Promise;
 
+// If debug run the mongoose debug options
+mongoose.set('debug', process.env.MONGOOSE_DEBUG);
+
 // Connect the db with the url provide
 mongoose.connect(constants.MONGO_URL);
 

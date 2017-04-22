@@ -27,7 +27,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon dist",
-    "dev:debug": "cross-env NODE_ENV=development DEBUG=express:*,mongoose nodemon dist",
+    "dev:debug": "cross-env NODE_ENV=development MONGOOSE_DEBUG=true DEBUG=express:* nodemon dist",
     "dev:watch": "babel -w --out-dir=dist ./src",
     "lint": "eslint src",
     "lint:fix": "eslint --fix src",
@@ -46,10 +46,13 @@
     "rimraf": "^2.6.1"
   },
   "dependencies": {
+    "bcrypt": "^1.0.2",
     "body-parser": "^1.17.1",
     "compression": "^1.6.2",
     "dotenv": "^4.0.0",
     "express": "^4.15.2",
-    "mongoose": "^4.9.5"
+    "jsonwebtoken": "^7.3.0",
+    "mongoose": "^4.9.5",
+    "validator": "^7.0.0"
   }
 }
