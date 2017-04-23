@@ -19,7 +19,8 @@ export const validation = {
 
 export async function create(req, res, next) {
   try {
-    return res.status(HTTPStatus.CREATED).json(await User.create(req.body));
+    const user = await User.create(req.body);
+    return res.status(HTTPStatus.CREATED).json(user.toJSON());
   } catch (e) {
     e.status = HTTPStatus.BAD_REQUEST;
     return next(e);

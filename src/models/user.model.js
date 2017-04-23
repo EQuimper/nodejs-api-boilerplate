@@ -81,7 +81,7 @@ UserSchema.methods = {
    * Generate a jwt token for authentication
    *
    * @public
-   * @returns {String} JWT token
+   * @returns {String} token - JWT token
    */
   createToken() {
     return jwt.sign(
@@ -90,6 +90,18 @@ UserSchema.methods = {
       },
       constants.JWT_SECRET,
     );
+  },
+
+  /**
+   * Give only what we want from the user
+   *
+   * @returns {Object} user - user._id && an JWT token
+   */
+  toJSON() {
+    return {
+      _id: this._id,
+      token: this.createToken(),
+    };
   },
 };
 
