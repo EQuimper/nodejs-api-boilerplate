@@ -47,6 +47,28 @@ or
 npm run dev:debug
 ```
 
+## For Validation on Request
+
+I'm using Joi in this boilerplate, that make the validation really easy.
+
+```js
+export const validation = {
+  create: {
+    body: {
+      email: Joi.string().email().required(),
+      password: Joi.string().regex(/^[a-zA-Z0-9]{3,30}$/).required(),
+      username: Joi.string().min(3).max(20).required(),
+    },
+  },
+};
+
+routes.post(
+  '/signup',
+  validate(UserController.validation.create),
+  UserController.create,
+);
+```
+
 ## Seeds
 
 For seed just run one of this following comand. This is helpful in dev for making fake user.
