@@ -7,13 +7,18 @@ import PrettyError from 'pretty-error';
 import HTTPStatus from 'http-status';
 
 import constants from '../config/constants';
+import APIError, { RequiredError } from './error';
 
 const isProd = process.env.NODE_ENV === 'production';
 
 // eslint-disable-next-line no-unused-vars
 export default function logErrorService(err, req, res, next) {
   if (!err) {
-    return res.sendStatus(HTTPStatus.INTERNAL_SERVER_ERROR);
+    return new APIError(
+      'Error with the server!',
+      HTTPStatus.INTERNAL_SERVER_ERROR,
+      true,
+    );
   }
 
   if (isProd) {
@@ -35,14 +40,15 @@ export default function logErrorService(err, req, res, next) {
   if (err.errors) {
     error.errors = {};
     const { errors } = err;
-    Object.keys(errors).forEach(key => {
-      if (errors[key].message) {
+    if (Array.isArray(errors)) {
+      error.errors = RequiredError.makePretty(errors);
+    } else {
+      Object.keys(errors).forEach(key => {
         error.errors[key] = errors[key].message;
-      } else {
-        error[errors[key].field] = errors[key].messages[key];
-      }
-    });
+      });
+    }
   }
+
   res.status(err.status || HTTPStatus.INTERNAL_SERVER_ERROR).json(error);
 
   return next();

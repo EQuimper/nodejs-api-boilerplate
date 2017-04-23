@@ -92,6 +92,7 @@ For seed just run one of this following comand. This is helpful in dev for makin
 - [Passport-Local](https://github.com/jaredhanson/passport-local)
 - [Passport-JWT](https://github.com/themikenicholson/passport-jwt)
 - [Raven](https://github.com/getsentry/raven-node)
+- [Joi](https://github.com/hapijs/joi)
 - [Http-Status](https://github.com/adaltas/node-http-status)
 
 ## Todo

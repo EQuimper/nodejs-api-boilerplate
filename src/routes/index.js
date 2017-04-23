@@ -3,9 +3,11 @@
  */
 
 import { Router } from 'express';
+import HTTPStatus from 'http-status';
 
 import UserRoutes from './user.routes';
 import SeedRoutes from './seed.routes';
+import APIError from '../services/error';
 
 // Middlewares
 import logErrorService from '../services/log';
@@ -19,6 +21,10 @@ routes.use('/users', UserRoutes);
 if (isDev) {
   routes.use('/seeds', SeedRoutes);
 }
+
+routes.get('*', (req, res, next) =>
+  next(new APIError('Not Found!', HTTPStatus.NOT_FOUND, true)),
+);
 
 routes.use(logErrorService);
 

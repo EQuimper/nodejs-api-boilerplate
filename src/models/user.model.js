@@ -43,7 +43,7 @@ const UserSchema = new Schema(
 );
 
 UserSchema.plugin(uniqueValidator, {
-  message: '{VALUE} is already taken!',
+  message: '{VALUE} already taken!',
 });
 
 // Hash the user password on creation
@@ -66,8 +66,8 @@ UserSchema.methods = {
    * Authenticate the user
    *
    * @public
-   * @param {String} password
-   * @returns {Boolean} password match
+   * @param {String} password - provided by the user
+   * @returns {Boolean} isMatch - password match
    */
   authenticateUser(password) {
     return compareSync(password, this.password);
@@ -76,10 +76,10 @@ UserSchema.methods = {
    * Hash the user password
    *
    * @private
-   * @param {String} password
-   * @param {Number} saltRounds
+   * @param {String} password - user password choose
+   * @param {Number} saltRounds - number of salt
    * @param {Function} cb
-   * @returns {String} hash password
+   * @returns {String} password - hash password
    */
   _hashPassword(password, saltRounds, cb) {
     return hash(password, saltRounds, cb);

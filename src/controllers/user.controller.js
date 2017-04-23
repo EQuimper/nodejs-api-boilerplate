@@ -22,6 +22,6 @@ export async function create(req, res, next) {
     return res.status(HTTPStatus.CREATED).json(await User.create(req.body));
   } catch (e) {
     e.status = HTTPStatus.BAD_REQUEST;
-    next(e);
+    return next(e);
   }
 }
