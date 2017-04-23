@@ -17,6 +17,11 @@ routes.post(
   validate(UserController.validation.create),
   UserController.create,
 );
-routes.post('/login', authLocal, AuthenticationController.login);
+routes.post(
+  '/login',
+  validate(AuthenticationController.validation.login),
+  authLocal,
+  AuthenticationController.login,
+);
 
 export default routes;
