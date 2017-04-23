@@ -3,6 +3,7 @@
  */
 
 import { Router } from 'express';
+import validate from 'express-validation';
 
 import * as UserController from '../controllers/user.controller';
 import * as AuthenticationController
@@ -11,7 +12,11 @@ import { authLocal } from '../services/auth';
 
 const routes = new Router();
 
-routes.post('/signup', UserController.create);
+routes.post(
+  '/signup',
+  validate(UserController.validation.create),
+  UserController.create,
+);
 routes.post('/login', authLocal, AuthenticationController.login);
 
 export default routes;

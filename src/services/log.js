@@ -4,6 +4,7 @@
 
 import Raven from 'raven';
 import PrettyError from 'pretty-error';
+import HTTPStatus from 'http-status';
 
 import constants from '../config/constants';
 
@@ -12,7 +13,7 @@ const isProd = process.env.NODE_ENV === 'production';
 // eslint-disable-next-line no-unused-vars
 export default function logErrorService(err, req, res, next) {
   if (!err) {
-    return res.sendStatus(500);
+    return res.sendStatus(HTTPStatus.INTERNAL_SERVER_ERROR);
   }
 
   if (isProd) {
@@ -35,10 +36,14 @@ export default function logErrorService(err, req, res, next) {
     error.errors = {};
     const { errors } = err;
     Object.keys(errors).forEach(key => {
-      error.errors[key] = errors[key].message;
+      if (errors[key].message) {
+        error.errors[key] = errors[key].message;
+      } else {
+        error[errors[key].field] = errors[key].messages[key];
+      }
     });
   }
-  res.status(err.status || 500).json(error);
+  res.status(err.status || HTTPStatus.INTERNAL_SERVER_ERROR).json(error);
 
-  next();
+  return next();
 }

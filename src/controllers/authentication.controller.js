@@ -1,5 +1,19 @@
+/**
+ * Authentication controller
+ */
+
+import HTTPStatus from 'http-status';
+
+/**
+ * Login function
+ *
+ * @param {any} req
+ * @param {any} res
+ * @param {any} next
+ * @returns {Object} with the user token
+ */
 export async function login(req, res, next) {
-  res.status(200).json({ token: req.user.createToken() });
+  res.status(HTTPStatus.OK).json({ token: req.user.createToken() });
 
   return next();
 }
