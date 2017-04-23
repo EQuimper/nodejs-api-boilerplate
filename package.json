@@ -9,8 +9,8 @@
     "url": "https://github.com/EQuimper/nodejs-api-boilerplate/issues"
   },
   "engines": {
-    "node": ">= 6",
-    "npm": ">= 3",
+    "node": ">= 7",
+    "npm": ">= 4",
     "yarn": ">=0.20.3"
   },
   "keywords": [
@@ -22,12 +22,14 @@
     "boilerplate",
     "mongo",
     "node",
-    "javascript"
+    "javascript",
+    "pm2",
+    "babel"
   ],
   "license": "MIT",
   "version": "0.0.1",
   "scripts": {
-    "start": "yarn build && cross-env NODE_ENV=production node dist",
+    "start": "yarn build && cross-env NODE_ENV=production pm2 dist",
     "dev": "cross-env NODE_ENV=development nodemon dist",
     "dev:debug": "cross-env NODE_ENV=development MONGOOSE_DEBUG=true DEBUG=express:* nodemon dist",
     "dev:watch": "babel -w --out-dir=dist ./src",
