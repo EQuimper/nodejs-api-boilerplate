@@ -3,7 +3,7 @@
  */
 
 import mongoose, { Schema } from 'mongoose';
-import { hash, compareSync } from 'bcrypt';
+import { hashSync, compareSync } from 'bcrypt-nodejs';
 import jwt from 'jsonwebtoken';
 import { isEmail } from 'validator';
 import uniqueValidator from 'mongoose-unique-validator';
@@ -49,14 +49,8 @@ UserSchema.plugin(uniqueValidator, {
 // Hash the user password on creation
 UserSchema.pre('save', function (next) {
   if (this.isModified('password')) {
-    return this._hashPassword(
-      this.password,
-      constants.SALT_ROUND,
-      (err, hashPwd) => {
-        this.password = hashPwd;
-        return next();
-      },
-    );
+    this.password = this._hashPassword(this.password);
+    return next();
   }
   return next();
 });
@@ -77,12 +71,10 @@ UserSchema.methods = {
    *
    * @private
    * @param {String} password - user password choose
-   * @param {Number} saltRounds - number of salt
-   * @param {Function} cb
    * @returns {String} password - hash password
    */
-  _hashPassword(password, saltRounds, cb) {
-    return hash(password, saltRounds, cb);
+  _hashPassword(password) {
+    return hashSync(password);
   },
 
   /**

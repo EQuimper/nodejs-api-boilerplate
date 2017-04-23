@@ -10,7 +10,8 @@
   },
   "engines": {
     "node": ">= 6",
-    "npm": ">= 3"
+    "npm": ">= 3",
+    "yarn": ">=0.20.3"
   },
   "keywords": [
     "express",
@@ -57,7 +58,7 @@
     "superagent": "^3.5.2"
   },
   "dependencies": {
-    "bcrypt": "^1.0.2",
+    "bcrypt-nodejs": "^0.0.3",
     "body-parser": "^1.17.1",
     "compression": "^1.6.2",
     "cors": "^2.8.3",
@@ -75,6 +76,7 @@
     "passport": "^0.3.2",
     "passport-jwt": "^2.2.1",
     "passport-local": "^1.0.0",
+    "pm2": "^2.4.5",
     "pretty-error": "^2.1.0",
     "raven": "^1.2.1",
     "validator": "^7.0.0",

@@ -1,8 +1,8 @@
 require('dotenv').config();
 
 const devConfig = {
-  JWT_SECRET: 'thisisasecret',
-  MONGO_URL: 'mongodb://localhost/nodejs-api-boilerplate-dev',
+  JWT_SECRET: process.env.JWT_SECRET_DEV,
+  MONGO_URL: process.env.MONGO_URL_DEV,
 };
 
 const testConfig = {
@@ -11,14 +11,13 @@ const testConfig = {
 };
 
 const prodConfig = {
-  JWT_SECRET: process.env.JWT_SECRET,
-  MONGO_URL: process.env.MONGO_URL,
-  RAVEN_ID: process.env.RAVEN_ID,
+  JWT_SECRET: process.env.JWT_SECRET_PROD,
+  MONGO_URL: process.env.MONGO_URL_PROD,
 };
 
 const defaultConfig = {
   PORT: process.env.PORT || 3000,
-  SALT_ROUND: 10,
+  RAVEN_ID: process.env.RAVEN_ID,
 };
 
 function envConfig(env) {

@@ -46,6 +46,8 @@ or
 npm run dev:debug
 ```
 
+---
+
 ## For Validation on Request
 
 I'm using Joi in this boilerplate, that make the validation really easy.
@@ -82,6 +84,14 @@ For seed just run one of this following comand. This is helpful in dev for makin
 
 ---
 
+## Docker
+
+```
+bash scripts/development.sh
+```
+
+---
+
 ## Techs
 
 - [Helmet](https://github.com/helmetjs/helmet)
@@ -94,6 +104,8 @@ For seed just run one of this following comand. This is helpful in dev for makin
 - [Raven](https://github.com/getsentry/raven-node)
 - [Joi](https://github.com/hapijs/joi)
 - [Http-Status](https://github.com/adaltas/node-http-status)
+
+---
 
 ## Todo
 
