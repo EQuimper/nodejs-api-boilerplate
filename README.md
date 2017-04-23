@@ -11,7 +11,6 @@ For get raven log create account here: [Sentry](https://sentry.io/)
   JWT_SECRET=yoursecret
   RAVEN_ID=yourapikey
   ```
-3.
 
 Monitoring Server on `http://localhost:3000/status`
 
@@ -102,3 +101,4 @@ For seed just run one of this following comand. This is helpful in dev for makin
 - [x] Raven Log
 - Sendgrid or Other Mail supply
 - Add S3 for user image
+- Add Test
