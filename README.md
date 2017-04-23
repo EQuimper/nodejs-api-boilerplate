@@ -53,6 +53,8 @@ For seed just run one of this following comand. This is helpful in dev for makin
 
 *This is only available in dev environment*
 
+**You can change the number of seed by changing the number in each script inside `/scripts/seeds`**
+
 - Seeds 10 user `yarn db:seeds-user`
 - Clear user collection `yarn db:seeds-clearUser`
 - Clear all collection `yarn db:seeds-clear`
