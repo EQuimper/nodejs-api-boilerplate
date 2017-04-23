@@ -13,6 +13,10 @@ For get raven log create account here: [Sentry](https://sentry.io/)
   ```
 3.
 
+Monitoring Server on `http://localhost:3000/status`
+
+---
+
 ## Scripts
 
 ### DEV
@@ -31,7 +35,7 @@ or
 npm run dev
 ```
 
-#### DEV-DEBUG
+### DEV-DEBUG
 
 ```
 yarn dev:debug
@@ -42,6 +46,18 @@ or
 ```
 npm run dev:debug
 ```
+
+## Seeds
+
+For seed just run one of this following comand. This is helpful in dev for making fake user.
+
+*This is only available in dev environment*
+
+- Seeds 10 user `yarn db:seeds-user`
+- Clear user collection `yarn db:seeds-clearUser`
+- Clear all collection `yarn db:seeds-clear`
+
+---
 
 ## Techs
 

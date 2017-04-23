@@ -3,6 +3,7 @@
  */
 
 import Raven from 'raven';
+import PrettyError from 'pretty-error';
 
 import constants from '../config/constants';
 
@@ -19,6 +20,13 @@ export default function logErrorService(err, req, res, next) {
     raven.captureException(err);
   }
 
+  const pe = new PrettyError();
+  pe.skipNodeFiles();
+  pe.skipPackage('express');
+
+  // eslint-disable-next-line no-console
+  console.log(pe.render(err));
+
   const error = {
     message: err.message || 'Internal Server Error.',
   };
@@ -31,4 +39,6 @@ export default function logErrorService(err, req, res, next) {
     });
   }
   res.status(err.status || 500).json(error);
+
+  next();
 }

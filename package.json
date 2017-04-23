@@ -26,7 +26,7 @@
   "license": "MIT",
   "version": "0.0.1",
   "scripts": {
-    "start": "yarn build && cross-env NODE_ENV=production  node dist",
+    "start": "yarn build && cross-env NODE_ENV=production node dist",
     "dev": "cross-env NODE_ENV=development nodemon dist",
     "dev:debug": "cross-env NODE_ENV=development MONGOOSE_DEBUG=true DEBUG=express:* nodemon dist",
     "dev:watch": "babel -w --out-dir=dist ./src",
@@ -35,7 +35,10 @@
     "build": "yarn run clean && babel --out-dir=dist ./src",
     "clean": "rimraf dist",
     "test": "NODE_ENV=test mocha --recursive --reporter spec --compilers js:babel-register tests",
-    "test:watch": "nodemon --exec 'yarn test' tests"
+    "test:watch": "nodemon --exec 'yarn test' tests",
+    "db:seeds-user": "bash ./scripts/seeds/user.seed.sh",
+    "db:seeds-clearUser": "bash ./scripts/seeds/clearUser.seed.sh",
+    "db:seeds-clear": "bash ./scripts/seeds/clearAll.seed.sh"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
@@ -60,6 +63,7 @@
     "cors": "^2.8.3",
     "dotenv": "^4.0.0",
     "express": "^4.15.2",
+    "express-status-monitor": "^0.1.9",
     "helmet": "^3.5.0",
     "jsonwebtoken": "^7.3.0",
     "mongoose": "^4.9.5",
@@ -67,6 +71,7 @@
     "passport": "^0.3.2",
     "passport-jwt": "^2.2.1",
     "passport-local": "^1.0.0",
+    "pretty-error": "^2.1.0",
     "raven": "^1.2.1",
     "validator": "^7.0.0"
   }
