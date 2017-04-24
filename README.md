@@ -60,11 +60,6 @@ toAuthJSON() {
   };
 },
 
-/**
-  * Parse the user object in data we wanted to send
-  *
-  * @returns {Object} User - ready for populate
-  */
 toJSON() {
   return {
     _id: this._id,
