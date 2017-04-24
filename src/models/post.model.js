@@ -64,7 +64,7 @@ PostSchema.statics = {
       .sort({ createdAt: -1 })
       .skip(skip)
       .limit(limit)
-      .populate('author', '_id username');
+      .populate('author');
   },
 };
 
