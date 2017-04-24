@@ -7,6 +7,7 @@ import morgan from 'morgan';
 import compression from 'compression';
 import passport from 'passport';
 import expressWinston from 'express-winston';
+import methodOverride from 'method-override';
 import helmet from 'helmet';
 import cors from 'cors';
 import expressStatusMonitor from 'express-status-monitor';
@@ -23,6 +24,7 @@ export default app => {
   app.use(helmet());
   app.use(cors());
   app.use(expressStatusMonitor());
+  app.use(methodOverride());
   if (isDev && !isTest) {
     app.use(morgan('dev'));
     expressWinston.requestWhitelist.push('body');

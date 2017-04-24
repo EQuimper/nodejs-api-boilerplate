@@ -6,7 +6,9 @@ import { Router } from 'express';
 import HTTPStatus from 'http-status';
 
 import UserRoutes from './user.routes';
+import PostRoutes from './post.routes';
 import SeedRoutes from './seed.routes';
+
 import APIError from '../services/error';
 
 // Middlewares
@@ -17,6 +19,7 @@ const routes = new Router();
 const isDev = process.env.NODE_ENV === 'development';
 
 routes.use('/users', UserRoutes);
+routes.use('/posts', PostRoutes);
 
 if (isDev) {
   routes.use('/seeds', SeedRoutes);

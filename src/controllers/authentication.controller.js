@@ -23,7 +23,7 @@ export const validation = {
  * @returns {Object} User - _id && token
  */
 export async function login(req, res, next) {
-  res.status(HTTPStatus.OK).json(req.user.toJSON());
+  res.status(HTTPStatus.OK).json(req.user.toAuthJSON());
 
   return next();
 }

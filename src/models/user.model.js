@@ -5,7 +5,6 @@
 import mongoose, { Schema } from 'mongoose';
 import { hashSync, compareSync } from 'bcrypt-nodejs';
 import jwt from 'jsonwebtoken';
-import { isEmail } from 'validator';
 import uniqueValidator from 'mongoose-unique-validator';
 
 import constants from '../config/constants';
@@ -19,7 +18,8 @@ const UserSchema = new Schema(
       trim: true,
       validate: {
         validator(email) {
-          return isEmail(email);
+          const emailRegex = /^[-a-z0-9%S_+]+(\.[-a-z0-9%S_+]+)*@(?:[a-z0-9-]{1,63}\.){1,125}[a-z]{2,63}$/i;
+          return emailRegex.test(email);
         },
         message: '{VALUE} is not a valid email!',
       },
@@ -93,18 +93,28 @@ UserSchema.methods = {
   },
 
   /**
-   * Give only what we want from the user
+   * Parse the user object in data we wanted to send when is auth
    *
-   * @returns {Object} user - user._id && an JWT token
+   * @returns {Object} User - ready for auth
+   */
+  toAuthJSON() {
+    return {
+      _id: this._id,
+      token: `JWT ${this.createToken()}`,
+    };
+  },
+
+  /**
+   * Parse the user object in data we wanted to send
+   *
+   * @returns {Object} User - ready for populate
    */
   toJSON() {
     return {
       _id: this._id,
-      token: this.createToken(),
+      username: this.username,
     };
   },
 };
 
-const User = mongoose.model('User', UserSchema);
-
-export default User;
+export default mongoose.model('User', UserSchema);

@@ -24,6 +24,7 @@ app.listen(constants.PORT, err => {
   } else {
     console.log(
       `
+      Yep this is working 🍺
       App listen on port: ${constants.PORT}
       Env: ${process.env.NODE_ENV}
     `,
