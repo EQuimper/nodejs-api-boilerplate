@@ -17,7 +17,7 @@
 
 ## Pre-Commit Hook
 
-I've add `pre-commit` and 'lint-staged` for lint your code before commit. That can maybe take time :bowtie:
+I've add `pre-commit` and `lint-staged` for lint your code before commit. That can maybe take time :bowtie:
 
 ## Usage
 
@@ -150,6 +150,7 @@ bash scripts/development.sh
 - [Prettier](https://github.com/prettier/prettier)
 - [Eslint Config EQuimper](https://github.com/EQuimper/eslint-config-equimper)
 - [Eslint Config Prettier](https://github.com/prettier/eslint-config-prettier)
+- [CodeClimate](https://codeclimate.com/)
 
 ---
 
