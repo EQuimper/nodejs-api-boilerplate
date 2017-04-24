@@ -1,3 +1,5 @@
+[![Code Climate](https://img.shields.io/codeclimate/github/EQuimper/nodejs-api-boilerplate.svg?style=flat-square)](https://codeclimate.com/github/EQuimper/nodejs-api-boilerplate)
+
 # NodeJS-API-Boilerplate
 
 # Get Started
