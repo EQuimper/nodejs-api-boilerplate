@@ -95,6 +95,7 @@ UserSchema.methods = {
   /**
    * Parse the user object in data we wanted to send when is auth
    *
+   * @public
    * @returns {Object} User - ready for auth
    */
   toAuthJSON() {
@@ -107,6 +108,7 @@ UserSchema.methods = {
   /**
    * Parse the user object in data we wanted to send
    *
+   * @public
    * @returns {Object} User - ready for populate
    */
   toJSON() {

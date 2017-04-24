@@ -25,8 +25,8 @@ app.listen(constants.PORT, err => {
     console.log(
       `
       Yep this is working 🍺
-      App listen on port: ${constants.PORT}
-      Env: ${process.env.NODE_ENV}
+      App listen on port: ${constants.PORT} 🍕
+      Env: ${process.env.NODE_ENV} 🦄
     `,
     );
   }
