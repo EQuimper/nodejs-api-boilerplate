@@ -13,7 +13,7 @@ const prettierCmd = path.resolve(
   `../node_modules/.bin/${prettier}`
 );
 const defaultOptions = {
-  'single-quote': 'true',
+  'single-quote': true,
   'trailing-comma': 'all',
   'print-width': 80,
 };
