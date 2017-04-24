@@ -145,6 +145,9 @@ bash scripts/development.sh
 - [Http-Status](https://github.com/adaltas/node-http-status)
 - [Lint-Staged](https://github.com/okonet/lint-staged)
 - [Pre-Commit](https://github.com/observing/pre-commit)
+- [Prettier](https://github.com/prettier/prettier)
+- [Eslint Config EQuimper](https://github.com/EQuimper/eslint-config-equimper)
+- [Eslint Config Prettier](https://github.com/prettier/eslint-config-prettier)
 
 ---
 

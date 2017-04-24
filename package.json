@@ -29,6 +29,12 @@
   "license": "MIT",
   "version": "0.0.1",
   "pre-commit": "lint-staged",
+  "lint-staged": {
+    "*.js": [
+      "eslint",
+      "prettier --write"
+    ]
+  },
   "scripts": {
     "start": "yarn build && cross-env NODE_ENV=production pm2 dist",
     "dev": "cross-env NODE_ENV=development nodemon dist",
@@ -56,6 +62,7 @@
     "cross-env": "^4.0.0",
     "eslint": "^3.19.0",
     "eslint-config-equimper": "^1.6.3",
+    "eslint-config-prettier": "^1.7.0",
     "faker": "^4.1.0",
     "glob": "^7.1.1",
     "lint-staged": "^3.4.0",

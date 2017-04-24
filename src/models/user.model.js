@@ -47,7 +47,7 @@ UserSchema.plugin(uniqueValidator, {
 });
 
 // Hash the user password on creation
-UserSchema.pre('save', function (next) {
+UserSchema.pre('save', function(next) {
   if (this.isModified('password')) {
     this.password = this._hashPassword(this.password);
     return next();

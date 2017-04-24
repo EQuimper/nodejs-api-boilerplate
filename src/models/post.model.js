@@ -1,44 +1,44 @@
-import mongoose, { Schema } from 'mongoose';
-import slug from 'slug';
-import uniqueValidator from 'mongoose-unique-validator';
+import mongoose, { Schema } from "mongoose";
+import slug from "slug";
+import uniqueValidator from "mongoose-unique-validator";
 
 const PostSchema = new Schema(
   {
     title: {
       type: String,
       trim: true,
-      required: [true, 'Title is required!'],
-      minlength: [3, 'Title must be longer!'],
-      unique: true,
+      required: [true, "Title is required!"],
+      minlength: [3, "Title must be longer!"],
+      unique: true
     },
     text: {
       type: String,
-      required: [true, 'Some text are required!'],
+      required: [true, "Some text are required!"]
     },
     slug: {
       type: String,
       trim: true,
       lowercase: true,
       unique: true,
-      required: true,
+      required: true
     },
     author: {
       type: Schema.Types.ObjectId,
-      ref: 'User',
-      required: [true, 'Author is required!'],
-    },
+      ref: "User",
+      required: [true, "Author is required!"]
+    }
   },
-  { timestamps: true },
+  { timestamps: true }
 );
 
 PostSchema.plugin(uniqueValidator, {
-  message: '{VALUE} already taken!',
+  message: "{VALUE} already taken!"
 });
 
 /**
  * Slugify the text on validation hook
  */
-PostSchema.pre('validate', function(next) {
+PostSchema.pre("validate", function(next) {
   this.slugify();
 
   next();
@@ -55,7 +55,7 @@ PostSchema.statics = {
   createPost(args, authorId) {
     return this.create({
       ...args,
-      author: authorId,
+      author: authorId
     });
   },
 
@@ -64,8 +64,8 @@ PostSchema.statics = {
       .sort({ createdAt: -1 })
       .skip(skip)
       .limit(limit)
-      .populate('author', '_id username');
-  },
+      .populate("author", "_id username");
+  }
 };
 
 PostSchema.methods = {
@@ -87,9 +87,9 @@ PostSchema.methods = {
       title: this.title,
       text: this.text,
       author: this.author,
-      createdAt: this.createdAt,
+      createdAt: this.createdAt
     };
-  },
+  }
 };
 
-export default mongoose.model('Post', PostSchema);
+export default mongoose.model("Post", PostSchema);
