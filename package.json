@@ -32,7 +32,7 @@
   "lint-staged": {
     "*.js": [
       "eslint",
-      "prettier --write"
+      "node ./scripts/prettier.js --write"
     ]
   },
   "scripts": {
