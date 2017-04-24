@@ -138,6 +138,8 @@ bash scripts/development.sh
 - [Raven](https://github.com/getsentry/raven-node)
 - [Joi](https://github.com/hapijs/joi)
 - [Http-Status](https://github.com/adaltas/node-http-status)
+- [Lint-Staged](https://github.com/okonet/lint-staged)
+- [Pre-Commit](https://github.com/observing/pre-commit)
 
 ---
 
