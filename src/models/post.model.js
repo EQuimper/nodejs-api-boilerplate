@@ -38,7 +38,7 @@ PostSchema.plugin(uniqueValidator, {
 /**
  * Slugify the text on validation hook
  */
-PostSchema.pre('validate', function (next) {
+PostSchema.pre('validate', function(next) {
   this.slugify();
 
   next();
