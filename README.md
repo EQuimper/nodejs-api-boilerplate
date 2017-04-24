@@ -48,6 +48,33 @@ npm run dev:debug
 
 ---
 
+## Why toJSON on methods model ?
+
+`toJSON()` help us to get only the data we want when we push the info to the client. So now we just need to put the user object in the `res.json(user)` and we received only what we want. Why `toAuthJSON()` ? Cause if we populated the post we get the `toJSON()` so the `toAuthJSON()` is the on to call on signup and login for get the token and _id.
+
+```js
+toAuthJSON() {
+  return {
+    _id: this._id,
+    token: `JWT ${this.createToken()}`,
+  };
+},
+
+/**
+  * Parse the user object in data we wanted to send
+  *
+  * @returns {Object} User - ready for populate
+  */
+toJSON() {
+  return {
+    _id: this._id,
+    username: this.username,
+  };
+},
+```
+
+---
+
 ## For Validation on Request
 
 I'm using Joi in this boilerplate, that make the validation really easy.
