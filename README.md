@@ -2,6 +2,7 @@
 
 # Get Started
 
+- [Pre-Commit Hook](https://github.com/EQuimper/nodejs-api-boilerplate#pre-commit-hook)
 - [Usage](https://github.com/EQuimper/nodejs-api-boilerplate#usage)
 - [Scripts](https://github.com/EQuimper/nodejs-api-boilerplate#scripts)
 - [Dev-Debug](https://github.com/EQuimper/nodejs-api-boilerplate#dev-debug)
@@ -11,6 +12,10 @@
 - [Docker](https://github.com/EQuimper/nodejs-api-boilerplate#docker)
 - [Techs](https://github.com/EQuimper/nodejs-api-boilerplate#techs)
 - [Todos](https://github.com/EQuimper/nodejs-api-boilerplate#add)
+
+## Pre-Commit Hook
+
+I've add `pre-commit` and 'lint-staged` for lint your code before commit. That can maybe take time :bowtie:
 
 ## Usage
 
