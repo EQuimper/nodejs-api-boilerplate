@@ -32,7 +32,8 @@
   "lint-staged": {
     "*.js": [
       "eslint",
-      "node ./scripts/prettier.js --write"
+      "yarn prettier",
+      "git add"
     ]
   },
   "scripts": {
