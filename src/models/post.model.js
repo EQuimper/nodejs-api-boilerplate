@@ -50,6 +50,7 @@ PostSchema.statics = {
   /**
    * Create a post
    *
+   * @public
    * @param {Object} args - Object contains title and text
    * @param {String} authorId - the author id
    * @returns {Post} Post Object - new post create
@@ -81,6 +82,7 @@ PostSchema.methods = {
   /**
    * Parse the post in format we want to send.
    *
+   * @public
    * @returns {Post} Post Object
    */
   toJSON() {

@@ -1,6 +1,13 @@
 verbose: false
 instrumentation:
-  excludes: ['dist/**', 'coverage/**', 'scripts/**', 'src/controllers/seed.controller.js']
+  excludes: [
+    'dist/**',
+    'coverage/**',
+    'scripts/**',
+    'src/controllers/seed.controller.js',
+    'src/seeds/**',
+    '__mocks__/**'
+  ]
   include-all-sources: true
 reporting:
     print: summary

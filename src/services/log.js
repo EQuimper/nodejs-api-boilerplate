@@ -10,6 +10,7 @@ import constants from '../config/constants';
 import APIError, { RequiredError } from './error';
 
 const isProd = process.env.NODE_ENV === 'production';
+const isDev = process.env.NODE_ENV === 'development';
 
 // eslint-disable-next-line no-unused-vars
 export default function logErrorService(err, req, res, next) {
@@ -26,12 +27,14 @@ export default function logErrorService(err, req, res, next) {
     raven.captureException(err);
   }
 
-  const pe = new PrettyError();
-  pe.skipNodeFiles();
-  pe.skipPackage('express');
+  if (isDev) {
+    const pe = new PrettyError();
+    pe.skipNodeFiles();
+    pe.skipPackage('express');
 
-  // eslint-disable-next-line no-console
-  console.log(pe.render(err));
+    // eslint-disable-next-line no-console
+    console.log(pe.render(err));
+  }
 
   const error = {
     message: err.message || 'Internal Server Error.',
