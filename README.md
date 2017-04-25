@@ -25,15 +25,14 @@ I've add `pre-commit` and `lint-staged` for lint your code before commit. That c
 
 For get raven log create account here: [Sentry](https://sentry.io/)
 
-1. Install dependencies `yarn` or `npm i`
-2. Create a `.env` file in the root like
+1. Clone the project `git clone https://github.com/EQuimper/nodejs-api-boilerplate.git`.
+2. Install dependencies `yarn install` or `npm i`
+3. Create a `.env` file in the root like
   ```
   MONGO_URL=yourmongodb
   JWT_SECRET=yoursecret
   RAVEN_ID=yourapikey
   ```
-
-Monitoring Server on `http://localhost:3000/status`
 
 ---
 
@@ -127,6 +126,11 @@ For seed just run one of this following comand. This is helpful in dev for makin
 
 ---
 
+Monitoring Server on `http://localhost:3000/status`
+
+---
+
+
 ## Docker
 
 ```
@@ -166,7 +170,5 @@ bash scripts/development.sh
 
 ### Add
 
-- [x] Raven Log
-- Sendgrid or Other Mail supply
-- Add S3 for user image
-- Add Test
+- [ ] Sendgrid or Other Mail supply
+- [ ] Add S3 for user image
