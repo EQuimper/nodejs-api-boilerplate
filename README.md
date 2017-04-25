@@ -156,6 +156,9 @@ bash scripts/development.sh
 - [Coveralls](https://github.com/integrations/coveralls)
 - [Travis](https://travis-ci.org/)
 - [Istanbul](https://github.com/gotwarlost/istanbul)
+- [Mocha](https://github.com/mochajs/mocha)
+- [Chai](https://github.com/chaijs/chai)
+- [Supertest](https://github.com/visionmedia/supertest)
 
 ---
 
