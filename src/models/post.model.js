@@ -1,3 +1,5 @@
+/* eslint-disable import/no-mutable-exports */
+
 import mongoose, { Schema } from 'mongoose';
 import slug from 'slug';
 import uniqueValidator from 'mongoose-unique-validator';
@@ -92,4 +94,12 @@ PostSchema.methods = {
   },
 };
 
-export default mongoose.model('Post', PostSchema);
+let Post;
+
+try {
+  Post = mongoose.model('Post');
+} catch (e) {
+  Post = mongoose.model('Post', PostSchema);
+}
+
+export default Post;

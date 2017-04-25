@@ -15,7 +15,11 @@ mongoose.Promise = global.Promise;
 mongoose.set('debug', process.env.MONGOOSE_DEBUG);
 
 // Connect the db with the url provide
-mongoose.connect(constants.MONGO_URL);
+try {
+  mongoose.connect(constants.MONGO_URL);
+} catch (err) {
+  mongoose.createConnection(constants.MONGO_URL);
+}
 
 mongoose.connection
   .once('open', () => console.log('MongoDB Running'))

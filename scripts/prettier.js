@@ -19,7 +19,11 @@ const defaultOptions = {
 };
 const config = {
   default: {
-    patterns: ['src/**/*.js'],
+    patterns: [
+      'src/**/*.js',
+      '__tests__/**/*.js',
+      '__mocks__/**/*.js',
+    ],
     ignore: ['**/node_modules/**'],
   },
 };

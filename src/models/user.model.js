@@ -1,6 +1,4 @@
-/**
- * User Model
- */
+/* eslint-disable import/no-mutable-exports */
 
 import mongoose, { Schema } from 'mongoose';
 import { hashSync, compareSync } from 'bcrypt-nodejs';
@@ -37,6 +35,12 @@ const UserSchema = new Schema(
       type: String,
       required: [true, 'Password is required!'],
       trim: true,
+      minlength: [6, 'Password need to be longer!'],
+      validate: {
+        validator(password) {
+          return password.length >= 6 && password.match(/\d+/g);
+        },
+      },
     },
   },
   { timestamps: true },
@@ -119,4 +123,12 @@ UserSchema.methods = {
   },
 };
 
-export default mongoose.model('User', UserSchema);
+let User;
+
+try {
+  User = mongoose.model('User');
+} catch (e) {
+  User = mongoose.model('User', UserSchema);
+}
+
+export default User;

@@ -1,4 +1,5 @@
 [![Code Climate](https://img.shields.io/codeclimate/github/EQuimper/nodejs-api-boilerplate.svg?style=flat-square)](https://codeclimate.com/github/EQuimper/nodejs-api-boilerplate)
+[![Coverage Status](https://coveralls.io/repos/github/EQuimper/nodejs-api-boilerplate/badge.svg?branch=master)](https://coveralls.io/github/EQuimper/nodejs-api-boilerplate?branch=master)
 
 # NodeJS-API-Boilerplate
 
@@ -151,6 +152,9 @@ bash scripts/development.sh
 - [Eslint Config EQuimper](https://github.com/EQuimper/eslint-config-equimper)
 - [Eslint Config Prettier](https://github.com/prettier/eslint-config-prettier)
 - [CodeClimate](https://codeclimate.com/)
+- [Coveralls](https://github.com/integrations/coveralls)
+- [Travis](https://travis-ci.org/)
+- [Istanbul](https://github.com/gotwarlost/istanbul)
 
 ---
 
