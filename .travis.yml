@@ -10,6 +10,6 @@ cache:
 git:
   depth: 3
 script:
-  - test:check-cover
+  - yarn test:check-cover
 after_script:
   - yarn report-coverage
