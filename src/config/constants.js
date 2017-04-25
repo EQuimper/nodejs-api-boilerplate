@@ -6,8 +6,8 @@ const devConfig = {
 };
 
 const testConfig = {
-  JWT_SECRET: process.env.JWT_SECRET_TEST,
-  MONGO_URL: process.env.MONGO_URL_TEST,
+  JWT_SECRET: 'ewtijwebgiuweg9w98u9283982t!!u1h28h1t1h89u9h@$$',
+  MONGO_URL: 'mongodb://localhost/nodejs-api-boilerplate-test',
 };
 
 const prodConfig = {
