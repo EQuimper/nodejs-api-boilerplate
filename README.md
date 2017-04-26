@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.org/EQuimper/nodejs-api-boilerplate.svg?branch=master)](https://travis-ci.org/EQuimper/nodejs-api-boilerplate)
 [![CircleCI](https://circleci.com/gh/EQuimper/nodejs-api-boilerplate.svg?&style=shield)](https://circleci.com/gh/EQuimper/nodejs-api-boilerplate)
 [![Greenkeeper badge](https://badges.greenkeeper.io/EQuimper/nodejs-api-boilerplate.svg)](https://greenkeeper.io/)
+[![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 # NodeJS-API-Boilerplate
 
