@@ -16,7 +16,7 @@ class PostFactory extends BaseFactory {
    */
   generate(attrs) {
     return {
-      title: faker.lorem.text(),
+      title: faker.lorem.words(6),
       text: faker.lorem.sentence(),
       ...attrs,
     };
