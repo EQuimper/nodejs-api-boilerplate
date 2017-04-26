@@ -2,7 +2,7 @@
 
 import mongoose, { Schema } from 'mongoose';
 import uniqueValidator from 'mongoose-unique-validator';
-import slugHero from 'mongoose-slug-hero';
+import slug from 'slug';
 
 const PostSchema = new Schema(
   {
@@ -17,6 +17,13 @@ const PostSchema = new Schema(
       type: String,
       required: [true, 'Some text are required!'],
     },
+    slug: {
+      type: String,
+      trim: true,
+      lowercase: true,
+      unique: true,
+      required: true,
+    },
     author: {
       type: Schema.Types.ObjectId,
       ref: 'User',
@@ -26,10 +33,17 @@ const PostSchema = new Schema(
   { timestamps: true },
 );
 
-PostSchema.plugin(slugHero, { doc: 'Post', field: 'title' });
-
 PostSchema.plugin(uniqueValidator, {
   message: '{VALUE} already taken!',
+});
+
+/**
+ * Slugify the text on validation hook
+ */
+PostSchema.pre('validate', function(next) {
+  this.slugify();
+
+  next();
 });
 
 PostSchema.statics = {
@@ -58,6 +72,12 @@ PostSchema.statics = {
 };
 
 PostSchema.methods = {
+  /**
+   * Slug the title and add this to the slug prop
+   */
+  slugify() {
+    this.slug = slug(this.title);
+  },
   /**
    * Parse the post in format we want to send.
    *

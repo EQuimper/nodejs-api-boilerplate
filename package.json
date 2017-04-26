@@ -108,7 +108,6 @@
     "jsonwebtoken": "^7.4.0",
     "method-override": "^2.3.8",
     "mongoose": "^4.9.6",
-    "mongoose-slug-hero": "^1.0.8",
     "mongoose-unique-validator": "^1.0.5",
     "passport": "^0.3.2",
     "passport-jwt": "^2.2.1",
@@ -116,6 +115,7 @@
     "pm2": "^2.4.5",
     "pretty-error": "^2.1.0",
     "raven": "^1.2.1",
+    "slug": "^0.9.1",
     "winston": "^2.3.1"
   }
 }
