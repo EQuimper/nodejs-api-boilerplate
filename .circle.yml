@@ -1,0 +1,6 @@
+machine:
+  timezone: America/Montreal
+  node:
+    version: 6.10.0
+  services:
+    - mongodb
