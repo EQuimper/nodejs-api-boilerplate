@@ -18,7 +18,7 @@ routes.post(
   validate(PostController.validation.create),
   PostController.create,
 );
-routes.put(
+routes.patch(
   '/:id',
   authJwt,
   validate(PostController.validation.update),

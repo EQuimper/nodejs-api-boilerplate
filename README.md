@@ -1,11 +1,15 @@
 [![Code Climate](https://img.shields.io/codeclimate/github/EQuimper/nodejs-api-boilerplate.svg?style=flat-square)](https://codeclimate.com/github/EQuimper/nodejs-api-boilerplate)
 [![Coverage Status](https://img.shields.io/coveralls/EQuimper/nodejs-api-boilerplate/master.svg?style=flat-square)](https://coveralls.io/github/EQuimper/nodejs-api-boilerplate?branch=master)
-[![Build Status](https://travis-ci.org/EQuimper/nodejs-api-boilerplate.svg?branch=master&bust=1)](https://travis-ci.org/EQuimper/nodejs-api-boilerplate)
+[![Build Status](https://img.shields.io/travis/EQuimper/nodejs-api-boilerplate/master.svg?style=flat-square)](https://travis-ci.org/EQuimper/nodejs-api-boilerplate)
 [![CircleCI](https://circleci.com/gh/EQuimper/nodejs-api-boilerplate.svg?&style=shield)](https://circleci.com/gh/EQuimper/nodejs-api-boilerplate)
+[![bitHound Overall Score](https://www.bithound.io/github/EQuimper/nodejs-api-boilerplate/badges/score.svg)](https://www.bithound.io/github/EQuimper/nodejs-api-boilerplate)
+[![bitHound Dependencies](https://www.bithound.io/github/EQuimper/nodejs-api-boilerplate/badges/dependencies.svg)](https://www.bithound.io/github/EQuimper/nodejs-api-boilerplate/master/dependencies/npm)
+[![bitHound Dev Dependencies](https://www.bithound.io/github/EQuimper/nodejs-api-boilerplate/badges/devDependencies.svg)](https://www.bithound.io/github/EQuimper/nodejs-api-boilerplate/master/dependencies/npm)
 [![Greenkeeper badge](https://badges.greenkeeper.io/EQuimper/nodejs-api-boilerplate.svg)](https://greenkeeper.io/)
-[![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+[![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 [![MIT License](https://img.shields.io/npm/l/stack-overflow-copy-paste.svg?style=flat-square)](http://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square)](http://commitizen.github.io/cz-cli/)
 
 # NodeJS-API-Boilerplate
 
