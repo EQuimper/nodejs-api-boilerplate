@@ -1,6 +1,6 @@
 [![Code Climate](https://img.shields.io/codeclimate/github/EQuimper/nodejs-api-boilerplate.svg?style=flat-square)](https://codeclimate.com/github/EQuimper/nodejs-api-boilerplate)
 [![Coverage Status](https://coveralls.io/repos/github/EQuimper/nodejs-api-boilerplate/badge.svg?branch=master&bust=1)](https://coveralls.io/github/EQuimper/nodejs-api-boilerplate?branch=master)
-[![Build Status](https://travis-ci.org/EQuimper/nodejs-api-boilerplate.svg?branch=master)](https://travis-ci.org/EQuimper/nodejs-api-boilerplate)
+[![Build Status](https://travis-ci.org/EQuimper/nodejs-api-boilerplate.svg?branch=master&bust=1)](https://travis-ci.org/EQuimper/nodejs-api-boilerplate)
 [![CircleCI](https://circleci.com/gh/EQuimper/nodejs-api-boilerplate.svg?&style=shield)](https://circleci.com/gh/EQuimper/nodejs-api-boilerplate)
 [![Greenkeeper badge](https://badges.greenkeeper.io/EQuimper/nodejs-api-boilerplate.svg)](https://greenkeeper.io/)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
