@@ -5,6 +5,8 @@
 
 # NodeJS-API-Boilerplate
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/EQuimper/nodejs-api-boilerplate.svg)](https://greenkeeper.io/)
+
 # Get Started
 
 - [Pre-Commit Hook](https://github.com/EQuimper/nodejs-api-boilerplate#pre-commit-hook)
