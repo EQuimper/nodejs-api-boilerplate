@@ -1,5 +1,6 @@
 {
   "name": "nodejs-api-boilerplate",
+  "version": "0.1.0",
   "author": "Emanuel Quimper <quimperemanuel@gmail.com> <https://github.com/EQuimper>",
   "repository": {
     "type": "git",
@@ -9,8 +10,8 @@
     "url": "https://github.com/EQuimper/nodejs-api-boilerplate/issues"
   },
   "engines": {
-    "node": ">= 7",
-    "npm": ">= 4",
+    "node": ">= 6.10",
+    "npm": ">= 3.10",
     "yarn": ">=0.20.3"
   },
   "main": "./src/index.js",
@@ -28,7 +29,6 @@
     "babel"
   ],
   "license": "MIT",
-  "version": "0.0.1",
   "pre-commit": "lint-staged",
   "lint-staged": {
     "*.js": [
