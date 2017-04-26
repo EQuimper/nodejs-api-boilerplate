@@ -1,8 +1,8 @@
 /* eslint-disable import/no-mutable-exports */
 
 import mongoose, { Schema } from 'mongoose';
-import slug from 'slug';
 import uniqueValidator from 'mongoose-unique-validator';
+import slug from 'slug';
 
 const PostSchema = new Schema(
   {
@@ -78,7 +78,6 @@ PostSchema.methods = {
   slugify() {
     this.slug = slug(this.title);
   },
-
   /**
    * Parse the post in format we want to send.
    *

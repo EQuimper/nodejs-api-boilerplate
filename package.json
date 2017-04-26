@@ -37,6 +37,11 @@
       "git add"
     ]
   },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
   "scripts": {
     "build": "yarn run clean && cross-env NODE_ENV=production babel --out-dir=dist ./src",
     "clean": "rimraf dist",
@@ -56,7 +61,8 @@
     "test:cover": "cross-env NODE_ENV=test istanbul cover _mocha $(find __tests__ -name '*.test.js') -- --compilers js:babel-register --colors --bail --recursive '__tests__/**/*.test.js'",
     "test:check-cover": "yarn test:cover && istanbul check-coverage",
     "cover:open": "open coverage/lcov-report/*.html",
-    "report-coverage": "coveralls < ./coverage/lcov.info"
+    "report-coverage": "coveralls < ./coverage/lcov.info",
+    "commit": "git-cz"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
@@ -65,8 +71,10 @@
     "babel-register": "^6.24.1",
     "chai": "^3.5.0",
     "chalk": "^1.1.3",
+    "commitizen": "^2.9.6",
     "coveralls": "^2.13.0",
     "cross-env": "^4.0.0",
+    "cz-conventional-changelog": "^2.0.0",
     "eslint": "^3.19.0",
     "eslint-config-equimper": "^1.6.3",
     "eslint-config-prettier": "^1.7.0",
