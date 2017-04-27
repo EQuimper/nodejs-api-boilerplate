@@ -22,7 +22,7 @@ const PostSchema = new Schema(
       trim: true,
       lowercase: true,
       unique: true,
-      required: true,
+      // required: true,
     },
     author: {
       type: Schema.Types.ObjectId,

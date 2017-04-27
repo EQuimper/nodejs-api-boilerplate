@@ -71,11 +71,13 @@ describe(`GET ${ENDPOINT}`, () => {
             expect(body.length).to.equal(2);
             expect(body[0].text).to.equal(testPost2.text);
             expect(body[0].author).to.haveOwnProperty('username');
+            expect(body[0].author).to.not.haveOwnProperty('password');
             expect(body[0].author).to.haveOwnProperty('_id');
             expect(body[0]._id).to.equal(testPost2._id.toString());
             expect(body[0]).to.haveOwnProperty('createdAt');
             expect(body[1].text).to.equal(testPost.text);
             expect(body[1].author).to.haveOwnProperty('username');
+            expect(body[1].author).to.not.haveOwnProperty('password');
             expect(body[1].author).to.haveOwnProperty('_id');
             expect(body[1]._id).to.equal(testPost._id.toString());
             expect(body[1]).to.haveOwnProperty('createdAt');

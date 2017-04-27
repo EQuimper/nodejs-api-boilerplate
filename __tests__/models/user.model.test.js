@@ -11,7 +11,7 @@ const masterUser = {
   password: 'password1',
 };
 
-describe('Model User', () => {
+describe('Model: User', () => {
   before(async () => {
     await User.remove();
     testUser = await User.create(masterUser);

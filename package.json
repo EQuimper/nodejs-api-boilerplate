@@ -37,11 +37,6 @@
       "git add"
     ]
   },
-  "config": {
-    "commitizen": {
-      "path": "cz-conventional-changelog"
-    }
-  },
   "scripts": {
     "build": "yarn run clean && cross-env NODE_ENV=production babel --out-dir=dist ./src",
     "clean": "rimraf dist",
@@ -117,5 +112,10 @@
     "raven": "^1.2.1",
     "slug": "^0.9.1",
     "winston": "^2.3.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
