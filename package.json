@@ -1,7 +1,7 @@
 {
   "name": "nodejs-api-boilerplate",
   "description": "A NodeJS server boilerplate for help you kickstart you futur node project. ES6/ES7 features.",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "author": "Emanuel Quimper <quimperemanuel@gmail.com> <https://github.com/EQuimper>",
   "repository": {
     "type": "git",
