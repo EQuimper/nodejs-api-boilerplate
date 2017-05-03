@@ -16,6 +16,9 @@
 
 # NodeJS-API-Boilerplate
 
+[![forthebadge](http://forthebadge.com/images/badges/built-by-developers.svg)](http://forthebadge.com)
+[![forthebadge](http://forthebadge.com/images/badges/powered-by-netflix.svg)](http://forthebadge.com)
+
 # Get Started
 
 - [Api Doc](https://github.com/EQuimper/nodejs-api-boilerplate#api-doc)
@@ -49,7 +52,7 @@ For get raven log create account here: [Sentry](https://sentry.io/)
   MONGO_URL=yourmongodb
   JWT_SECRET=yoursecret
   RAVEN_ID=yourapikey
-  DOCS_WEBSITE=equimper-nodejs-api-boilerplate.surge.sh/
+  DOCS_WEBSITE=yourwebsite.surge.sh/
   ```
 
 ---
