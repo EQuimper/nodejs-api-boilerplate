@@ -11,8 +11,7 @@ export async function seedUsers(req, res, next) {
   try {
     await userSeed(req.params.count);
 
-    return res
-      .status(HTTPStatus.OK)
+    return res.status(HTTPStatus.OK)
       .send(`User seed success! Created ${req.params.count} users!`);
   } catch (e) {
     e.status = HTTPStatus.BAD_REQUEST;
