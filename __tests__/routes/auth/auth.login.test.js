@@ -8,6 +8,9 @@ const ENDPOINT = '/api/users/login';
 
 let testUser;
 
+/**
+ * @test {auth.routes.js}
+ */
 describe(`POST ${ENDPOINT}`, () => {
   before(async () => {
     await User.remove();

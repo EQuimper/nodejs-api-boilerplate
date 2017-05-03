@@ -35,6 +35,7 @@ export async function clearSeedUsers(req, res, next) {
  *
  * @param {any} req
  * @param {any} res
+ * @param {any} next
  * @returns {String} All collections clear
  */
 export async function clearAll(req, res, next) {

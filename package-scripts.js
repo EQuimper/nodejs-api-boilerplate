@@ -1,6 +1,7 @@
+require('dotenv').config();
+
 const npsUtils = require('nps-utils');
 
-const concurrent = npsUtils.concurrent;
 const crossEnv = npsUtils.crossEnv;
 const rimraf = npsUtils.rimraf;
 const series = npsUtils.series;
@@ -19,6 +20,14 @@ module.exports = {
     default: {
       description: 'Start project with pm2 on production.',
       script: `yarn build && ${crossEnv('NODE_ENV=production')} pm2 dist`
+    },
+    doc: {
+      description: 'Documenting the api.',
+      default: 'apidoc -i src',
+      deploy: {
+        description: 'Deploy the docs on surge.',
+        script: series('nps doc', `surge ./doc/ -d ${process.env.DOCS_WEBSITE}`)
+      }
     },
     dev: {
       default: {
@@ -65,7 +74,7 @@ module.exports = {
     },
     validate: {
       description: 'Validate code by linting, type-checking.',
-      default: concurrent.nps('lint'),
+      default: series.nps('lint', 'test', 'doc.deploy'),
     },
   }
 };

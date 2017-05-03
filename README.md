@@ -9,6 +9,7 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square)](http://commitizen.github.io/cz-cli/)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square)](https://github.com/semantic-release/semantic-release)
+[![Dependency Status](https://dependencyci.com/github/EQuimper/nodejs-api-boilerplate/badge)](https://dependencyci.com/github/EQuimper/nodejs-api-boilerplate)
 [![dependencies Status](https://david-dm.org/equimper/nodejs-api-boilerplate/status.svg?style=flat-square)](https://david-dm.org/equimper/nodejs-api-boilerplate)
 [![devDependencies Status](https://david-dm.org/equimper/nodejs-api-boilerplate/dev-status.svg?style=flat-square)](https://david-dm.org/equimper/nodejs-api-boilerplate?type=dev)
 [![nps](https://img.shields.io/badge/scripts%20run%20with-nps-blue.svg?style=flat-square)](https://github.com/kentcdodds/nps)
@@ -17,6 +18,7 @@
 
 # Get Started
 
+- [Api Doc](https://github.com/EQuimper/nodejs-api-boilerplate#api-doc)
 - [Pre-Commit Hook](https://github.com/EQuimper/nodejs-api-boilerplate#pre-commit-hook)
 - [Usage](https://github.com/EQuimper/nodejs-api-boilerplate#usage)
 - [Scripts](https://github.com/EQuimper/nodejs-api-boilerplate#scripts)
@@ -27,6 +29,10 @@
 - [Docker](https://github.com/EQuimper/nodejs-api-boilerplate#docker)
 - [Techs](https://github.com/EQuimper/nodejs-api-boilerplate#techs)
 - [Todos](https://github.com/EQuimper/nodejs-api-boilerplate#add)
+
+## Api Doc
+
+Api doc his hosted on surge. [Link](http://equimper-nodejs-api-boilerplate.surge.sh/)
 
 ## Pre-Commit Hook
 
@@ -43,6 +49,7 @@ For get raven log create account here: [Sentry](https://sentry.io/)
   MONGO_URL=yourmongodb
   JWT_SECRET=yoursecret
   RAVEN_ID=yourapikey
+  DOCS_WEBSITE=equimper-nodejs-api-boilerplate.surge.sh/
   ```
 
 ---
