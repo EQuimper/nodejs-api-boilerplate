@@ -60,9 +60,11 @@
     "db:seeds-clear-user": "nps db.seedsClear",
     "lint": "nps lint",
     "lint:fix": "nps lint.fix",
-    "reportCoverage": "nps reportCoverage"
+    "reportCoverage": "nps reportCoverage",
+    "doc": "nps doc"
   },
   "devDependencies": {
+    "apidoc": "^0.17.5",
     "babel-cli": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-preset-env": "^1.4.0",
