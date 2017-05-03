@@ -24,13 +24,11 @@ if (!module.parent) {
     if (err) {
       console.error('Cannot run');
     } else {
-      console.log(
-        `
+      console.log(`
           Yep this is working 🍺
           App listen on port: ${constants.PORT} 🍕
           Env: ${process.env.NODE_ENV} 🦄
-        `,
-      );
+        `);
     }
   });
 }
