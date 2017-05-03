@@ -59,7 +59,8 @@
     "db:seeds-clear": "nps db.seedsClearUser",
     "db:seeds-clear-user": "nps db.seedsClear",
     "lint": "nps lint",
-    "lint:fix": "nps lint.fix"
+    "lint:fix": "nps lint.fix",
+    "reportCoverage": "nps reportCoverage"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
