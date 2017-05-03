@@ -6,6 +6,7 @@ instrumentation:
     'scripts/**',
     'src/controllers/seed.controller.js',
     'src/seeds/**',
+    'package-scripts.js',
     '__mocks__/**'
   ]
   include-all-sources: true

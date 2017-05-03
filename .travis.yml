@@ -6,10 +6,12 @@ services:
   - mongodb
 cache:
   directories:
-  - node_modules
+    - node_modules
 git:
   depth: 3
 script:
-  - yarn test:check-cover
+  - yarn checkCover
 after_script:
   - yarn report-coverage
+after_success:
+  - yarn semantic-release

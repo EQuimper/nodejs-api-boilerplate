@@ -8,6 +8,10 @@
 [![MIT License](https://img.shields.io/npm/l/stack-overflow-copy-paste.svg?style=flat-square)](http://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square)](http://commitizen.github.io/cz-cli/)
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square)](https://github.com/semantic-release/semantic-release)
+[![dependencies Status](https://david-dm.org/equimper/nodejs-api-boilerplate/status.svg?style=flat-square)](https://david-dm.org/equimper/nodejs-api-boilerplate)
+[![devDependencies Status](https://david-dm.org/equimper/nodejs-api-boilerplate/dev-status.svg?style=flat-square)](https://david-dm.org/equimper/nodejs-api-boilerplate?type=dev)
+[![nps](https://img.shields.io/badge/scripts%20run%20with-nps-blue.svg?style=flat-square)](https://github.com/kentcdodds/nps)
 
 # NodeJS-API-Boilerplate
 
@@ -128,7 +132,7 @@ For seed just run one of this following comand. This is helpful in dev for makin
 *You can change the number of seed by changing the number in each script inside `/scripts/seeds`*
 
 - Seeds 10 user `yarn db:seeds-user`
-- Clear user collection `yarn db:seeds-clearUser`
+- Clear user collection `yarn db:seeds-clear-user`
 - Clear all collection `yarn db:seeds-clear`
 
 ---
@@ -172,6 +176,7 @@ bash scripts/development.sh
 - [Mocha](https://github.com/mochajs/mocha)
 - [Chai](https://github.com/chaijs/chai)
 - [Supertest](https://github.com/visionmedia/supertest)
+- [NPS](https://github.com/kentcdodds/nps)
 
 ---
 
