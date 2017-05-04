@@ -35,8 +35,9 @@ describe('Model: User', () => {
       defaultUser.email = 'notgoodemail';
       const user = new User(defaultUser);
       let validation = user.validateSync();
-      expect(validation.errors.email.message).to
-        .equal(`${defaultUser.email} is not a valid email!`);
+      expect(validation.errors.email.message).to.equal(
+        `${defaultUser.email} is not a valid email!`,
+      );
       user.email = 'test@gmail.com';
       validation = user.validateSync();
       expect(validation).to.equal(undefined);

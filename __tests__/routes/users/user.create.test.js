@@ -39,10 +39,12 @@ describe(`POST ${ENDPOINT}`, () => {
           const { status, body } = res;
           expect(status).to.equal(400);
           expect(body.message).to.equal('User validation failed');
-          expect(body.errors.username).to
-            .equal(`${testUser.username} already taken!`);
-          expect(body.errors.email).to
-            .equal(`${testUser.email} already taken!`);
+          expect(body.errors.username).to.equal(
+            `${testUser.username} already taken!`,
+          );
+          expect(body.errors.email).to.equal(
+            `${testUser.email} already taken!`,
+          );
           done();
         });
     });
