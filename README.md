@@ -62,10 +62,6 @@ For get raven log create account here: [Sentry](https://sentry.io/)
 
 ### DEV
 
-First thing you want to start babel to compile the project by doing `yarn dev:watch` or `npm run dev:watch`
-
-After
-
 ```
 yarn dev
 ```
@@ -75,6 +71,8 @@ or
 ```
 npm run dev
 ```
+
+**PS** That can crash it's the first time but don't worry give it 2 sec the scripts gonna work. He just need to created a dist folder :) This way you have only one command to run.
 
 ### DEV-DEBUG
 

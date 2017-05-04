@@ -41,13 +41,15 @@
       "git add"
     ]
   },
+  "release": {
+    "analyzeCommits": "nodejs-api-boilerplate"
+  },
   "scripts": {
     "build": "nps build.withClean",
     "start": "nps",
     "test": "nps test",
     "test:watch": "nps test.watch",
     "dev": "nps dev",
-    "dev:watch": "nps dev.watch",
     "dev:debug": "nps dev.debug",
     "prettier": "node ./scripts/prettier.js write",
     "precommit": "nps lintStaged && nps validate",
@@ -87,7 +89,7 @@
     "nps": "^5.1.0",
     "nps-utils": "^1.2.0",
     "pre-commit": "^1.2.2",
-    "prettier": "^1.3.0",
+    "prettier": "^1.3.1",
     "semantic-release": "^6.3.2",
     "shelljs": "^0.7.7",
     "superagent": "^3.5.2",
