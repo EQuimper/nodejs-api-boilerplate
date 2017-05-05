@@ -18,6 +18,12 @@ const prodConfig = {
 const defaultConfig = {
   PORT: process.env.PORT || 3000,
   RAVEN_ID: process.env.RAVEN_ID,
+  WHITELIST: {
+    posts: {
+      create: ['title', 'text'],
+      update: ['title', 'text'],
+    },
+  },
 };
 
 function envConfig(env) {

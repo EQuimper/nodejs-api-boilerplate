@@ -4,7 +4,9 @@
 
 import Joi from 'joi';
 import HTTPStatus from 'http-status';
+import contants from '../config/constants';
 
+import { filteredBody } from '../utils/filteredBody';
 import Post from '../models/post.model';
 
 export const validation = {
@@ -174,10 +176,11 @@ export async function getById(req, res, next) {
  *    HTTP/1.1 401 Unauthorized
  */
 export async function create(req, res, next) {
+  const body = filteredBody(req.body, contants.WHITELIST.posts.create);
   try {
     return res
       .status(HTTPStatus.CREATED)
-      .json(await Post.createPost(req.body, req.user._id));
+      .json(await Post.createPost(body, req.user._id));
   } catch (err) {
     err.status = HTTPStatus.BAD_REQUEST;
     return next(err);
@@ -273,6 +276,7 @@ export async function deletePost(req, res, next) {
  *    HTTP/1.1 401 Unauthorized
  */
 export async function updatePost(req, res, next) {
+  const body = filteredBody(req.body, contants.WHITELIST.posts.update);
   try {
     const post = await Post.findById(req.params.id);
 
@@ -280,8 +284,8 @@ export async function updatePost(req, res, next) {
       return res.sendStatus(HTTPStatus.UNAUTHORIZED);
     }
 
-    Object.keys(req.body).forEach(key => {
-      post[key] = req.body[key];
+    Object.keys(body).forEach(key => {
+      post[key] = body[key];
     });
 
     return res.status(HTTPStatus.OK).json(await post.save());

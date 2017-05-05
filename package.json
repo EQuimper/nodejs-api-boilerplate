@@ -43,7 +43,7 @@
     ]
   },
   "scripts": {
-    "build": "nps build.withClean",
+    "build": "nps build",
     "start": "nps",
     "test": "nps test",
     "test:watch": "nps test.watch",
@@ -61,11 +61,14 @@
     "lint": "nps lint",
     "lint:fix": "nps lint.fix",
     "reportCoverage": "nps reportCoverage",
-    "doc": "nps doc"
+    "doc": "nps doc",
+    "webpack": "webpack -p",
+    "watch": "webpack -w"
   },
   "devDependencies": {
     "apidoc": "^0.17.5",
     "babel-cli": "^6.24.1",
+    "babel-loader": "^7.0.0",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-preset-env": "^1.4.0",
     "babel-register": "^6.24.1",
@@ -91,7 +94,9 @@
     "semantic-release": "^6.3.2",
     "shelljs": "^0.7.7",
     "superagent": "^3.5.2",
-    "supertest": "^3.0.0"
+    "supertest": "^3.0.0",
+    "webpack": "^2.5.0",
+    "webpack-node-externals": "^1.5.4"
   },
   "dependencies": {
     "bcrypt-nodejs": "^0.0.3",
