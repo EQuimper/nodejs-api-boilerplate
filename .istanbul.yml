@@ -9,6 +9,7 @@ instrumentation:
     'package-scripts.js',
     '__mocks__/**',
     'doc/**',
+    'webpack.config.js'
   ]
   include-all-sources: true
 reporting:
