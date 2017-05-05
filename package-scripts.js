@@ -13,8 +13,8 @@ module.exports = {
   scripts: {
     build: {
       description: 'Building in production environment.',
-      default: `${crossEnv('NODE_ENV=production')} babel --out-dir=dist ./src`,
-      withClean: series.nps('clean', 'build'),
+      default: series.nps('clean', 'build.build'),
+      build: `${crossEnv('NODE_ENV=production')} webpack`
     },
     clean: {
       description: 'Clean dist folder.',
@@ -22,7 +22,7 @@ module.exports = {
     },
     default: {
       description: 'Start project with pm2 on production.',
-      script: `yarn build && ${crossEnv('NODE_ENV=production')} pm2 dist`,
+      script: `${crossEnv('NODE_ENV=production')} pm2 start dist/index.bundle.js`,
     },
     doc: {
       description: 'Documenting the api.',
@@ -35,17 +35,17 @@ module.exports = {
     dev: {
       start: {
         description: 'Running on dev environment.',
-        script: `${crossEnv('NODE_ENV=development')} nodemon dist`,
+        script: `${crossEnv('NODE_ENV=development')} nodemon dist/index.bundle.js`,
       },
       default: {
         script: concurrent.nps('dev.watch', 'dev.start'),
       },
       watch: {
-        description: 'Babel watch for change and compile.',
-        script: 'babel -w --out-dir=dist ./src',
+        description: 'Webpack watch for change and compile.',
+        script: 'webpack -w',
       },
       withDebug: {
-        script: `${crossEnv('NODE_ENV=development')} MONGOOSE_DEBUG=true DEBUG=express:* nodemon dist`,
+        script: `${crossEnv('NODE_ENV=development')} MONGOOSE_DEBUG=true DEBUG=express:* nodemon dist/index.bundle.js`,
       },
       debug: {
         description: 'Running on dev environment with debug on.',
