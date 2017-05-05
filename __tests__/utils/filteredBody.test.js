@@ -2,7 +2,7 @@ import { expect } from 'chai';
 
 import { filteredBody } from '../../src/utils/filteredBody';
 
-describe('#filteredBody', () => {
+describe('#filteredBody()', () => {
   it('should filter the object given with the list provided', () => {
     const body = {
       title: 'Hello World',

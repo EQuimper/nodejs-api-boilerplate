@@ -19,6 +19,7 @@
 [![dependencies Status](https://david-dm.org/equimper/nodejs-api-boilerplate/status.svg?style=flat-square)](https://david-dm.org/equimper/nodejs-api-boilerplate)
 [![devDependencies Status](https://david-dm.org/equimper/nodejs-api-boilerplate/dev-status.svg?style=flat-square)](https://david-dm.org/equimper/nodejs-api-boilerplate?type=dev)
 [![nps](https://img.shields.io/badge/scripts%20run%20with-nps-blue.svg?style=flat-square)](https://github.com/kentcdodds/nps)
+[![code style equimper](https://img.shields.io/badge/code%20style-equimper-blue.svg?style=flat-square)](https://github.com/EQuimper/eslint-config-equimper)
 
 # NodeJS-API-Boilerplate
 
