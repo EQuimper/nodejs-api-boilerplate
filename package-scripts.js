@@ -14,7 +14,7 @@ module.exports = {
     build: {
       description: 'Building in production environment.',
       default: series.nps('clean', 'build.build'),
-      build: `${crossEnv('NODE_ENV=production')} webpack`
+      build: 'webpack -p'
     },
     clean: {
       description: 'Clean dist folder.',
