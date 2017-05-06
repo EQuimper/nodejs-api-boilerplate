@@ -62,7 +62,13 @@ PostSchema.statics = {
     });
   },
 
-  list({ skip = 0, limit = 10 }) {
+  /**
+   * If you call list() with zero arguments, the destructuring fails,
+   * because you can’t match an object pattern against undefined.
+   * That can be fixed via a default value. In the following code,
+   * the object pattern is matched against {} if there isn’t at least one argument.
+   */
+  list({ skip = 0, limit = 10 } = {}) {
     return this.find()
       .sort({ createdAt: -1 })
       .skip(skip)
