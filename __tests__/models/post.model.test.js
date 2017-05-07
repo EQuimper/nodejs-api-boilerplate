@@ -41,16 +41,35 @@ describe('Model: Post', () => {
   });
 
   describe('#toJSON()', () => {
-    it('should return _it, title, text, author and createdAt', () => {
+    it('should return _it, title, text, favoriteCount,author and createdAt', () => {
       const jsonPost = testPost.toJSON();
       expect(jsonPost).to.haveOwnProperty('_id');
       expect(jsonPost).to.haveOwnProperty('title');
       expect(jsonPost).to.haveOwnProperty('text');
       expect(jsonPost).to.haveOwnProperty('author');
       expect(jsonPost).to.haveOwnProperty('createdAt');
+      expect(jsonPost).to.haveOwnProperty('favoriteCount');
       expect(jsonPost).to.not.haveOwnProperty('updatedAt');
       expect(jsonPost).to.not.haveOwnProperty('__v');
       expect(jsonPost).to.not.haveOwnProperty('slug');
+    });
+  });
+
+  describe('#incFavoriteCount()', () => {
+    it('should increment the favorite count property by 1', async () => {
+      await Post.incFavoriteCount(testPost._id);
+      const post = await Post.findById(testPost);
+      const jsonPost = post.toJSON();
+      expect(jsonPost.favoriteCount).to.equal(1);
+    });
+  });
+
+  describe('#decFavoriteCount()', () => {
+    it('should decrement the favorite count property by 1', async () => {
+      await Post.decFavoriteCount(testPost._id);
+      const post = await Post.findById(testPost);
+      const jsonPost = post.toJSON();
+      expect(jsonPost.favoriteCount).to.equal(0);
     });
   });
 });

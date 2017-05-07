@@ -1,6 +1,8 @@
 import { expect } from 'chai';
 
 import User from '../../src/models/user.model';
+import Post from '../../src/models/post.model';
+import PostFactory from '../../__mocks__/factories/post.factory';
 
 let testUser;
 let defaultUser;
@@ -100,6 +102,22 @@ describe('Model: User', () => {
     it('should not return password', () => {
       const jsonUser = testUser.toAuthJSON();
       expect(jsonUser).to.not.haveOwnProperty('password');
+    });
+  });
+
+  describe('favorites', () => {
+    describe('#posts()', async () => {
+      const post = await Post.create(
+        PostFactory.generate({ author: testUser._id }),
+      );
+      await testUser._favorites.posts(post._id);
+      it('should add post id if not already there', () => {
+        expect(testUser.favorites.posts.length).to.equal(1);
+      });
+      it('should remove post id if already there', async () => {
+        await testUser._favorites.posts(post._id);
+        expect(testUser.favorites.posts.length).to.equal(1);
+      });
     });
   });
 });

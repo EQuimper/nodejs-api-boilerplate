@@ -5,6 +5,7 @@ import { hashSync, compareSync } from 'bcrypt-nodejs';
 import jwt from 'jsonwebtoken';
 import uniqueValidator from 'mongoose-unique-validator';
 
+import Post from './post.model';
 import constants from '../config/constants';
 
 const UserSchema = new Schema(
@@ -42,6 +43,14 @@ const UserSchema = new Schema(
         },
       },
     },
+    favorites: {
+      posts: [
+        {
+          type: Schema.Types.ObjectId,
+          ref: 'Post',
+        },
+      ],
+    },
   },
   { timestamps: true },
 );
@@ -60,6 +69,48 @@ UserSchema.pre('save', function(next) {
 });
 
 UserSchema.methods = {
+  /**
+   * Favorites actions
+   *
+   * @public
+   */
+  _favorites: {
+    /**
+     * Favorite a post or unfavorite if already here
+     *
+     * @param {String} postId - _id of the post like
+     * @returns {Promise}
+     */
+    async posts(postId) {
+      try {
+        if (this.favorites.posts.indexOf(postId) >= 0) {
+          this.favorites.posts.remove(postId);
+          await Post.decFavoriteCount(postId);
+        } else {
+          await Post.incFavoriteCount(postId);
+          this.favorites.posts.push(postId);
+        }
+
+        return this.save();
+      } catch (err) {
+        return err;
+      }
+    },
+
+    /**
+     * Check if post is favorite by current user.
+     *
+     * @param {String} postId - _id of the post
+     * @returns {Boolean} isFavorite - post is favorite by current user
+     */
+    isPostIsFavorite(postId) {
+      if (this.favorites.posts.indexOf(postId) >= 0) {
+        return true;
+      }
+
+      return false;
+    },
+  },
   /**
    * Authenticate the user
    *
