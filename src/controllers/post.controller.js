@@ -40,7 +40,9 @@ export const validation = {
  * @apiSuccess {String} post._id Post _id.
  * @apiSuccess {String} post.title Post title.
  * @apiSuccess {String} post.text Post text.
- * @apiSuccess {String} post.author Post author id.
+ * @apiSuccess {Object} post.author Post author.
+ * @apiSuccess {String} post.author._id Post author _id.
+ * @apiSuccess {String} post.author.username Post author username.
  * @apiSuccess {String} post.createdAt Post created date.
  *
  *
@@ -61,14 +63,20 @@ export const validation = {
  *    title: 'New title 1',
  *    text: 'New text 1',
  *    createdAt: '2017-05-03',
- *    author: '123312'
+ *    author: {
+ *      _id: '123312',
+ *      username: 'Jon'
+ *    }
  *  },
  *  {
  *    _id: '12234',
  *    title: 'New title 2',
  *    text: 'New text 2',
  *    createdAt: '2017-05-03',
- *    author: '123312234'
+ *    author: {
+ *      _id: '123312234',
+ *      username: 'Jon'
+ *    }
  *  }
  * ]
  *
@@ -81,7 +89,12 @@ export async function getList(req, res, next) {
   try {
     return res
       .status(HTTPStatus.OK)
-      .json(await Post.list({ skip: req.query.skip, limit: req.query.limit }));
+      .json(
+        await Post.list({
+          skip: req.query.skip,
+          limit: req.query.limit,
+        }).populate('author'),
+      );
   } catch (err) {
     err.status = HTTPStatus.BAD_REQUEST;
     return next(err);
@@ -142,6 +155,9 @@ export async function getById(req, res, next) {
  * @apiDescription Create a post
  * @apiName createPost
  * @apiGroup Post
+ *
+ * @apiParam (Body) {String} title Post title.
+ * @apiParam (Body) {String} text Post text.
  *
  * @apiHeader {Authorization} Authorization JWT Token
  *
@@ -242,6 +258,9 @@ export async function deletePost(req, res, next) {
  * @apiHeader {Authorization} Authorization JWT Token
  *
  * @apiParam {String} id Post unique ID.
+ *
+ * @apiParam (Body) {String} [title] Post title.
+ * @apiParam (Body) {String} [text] Post text.
  *
  * @apiSuccess {Number} status Status of the Request.
  * @apiSuccess {Object} post Post updated.

@@ -30,11 +30,15 @@
 [![forthebadge](http://forthebadge.com/images/badges/you-didnt-ask-for-this.svg)](http://forthebadge.com)
 [![forthebadge](http://forthebadge.com/images/badges/winter-is-coming.svg)](http://forthebadge.com)
 
+# Always in progress 👷‍
+
 # Get Started
 
+- [Installation](https://github.com/EQuimper/nodejs-api-boilerplate#installation)
+- [Install Mongodb](https://github.com/EQuimper/nodejs-api-boilerplate#install-mongodb)
+- [Raven Log](https://github.com/EQuimper/nodejs-api-boilerplate#raven-log)
 - [Api Doc](https://github.com/EQuimper/nodejs-api-boilerplate#api-doc)
 - [Pre-Commit Hook](https://github.com/EQuimper/nodejs-api-boilerplate#pre-commit-hook)
-- [Usage](https://github.com/EQuimper/nodejs-api-boilerplate#usage)
 - [Scripts](https://github.com/EQuimper/nodejs-api-boilerplate#scripts)
 - [Dev-Debug](https://github.com/EQuimper/nodejs-api-boilerplate#dev-debug)
 - [Why toJSON() on methods model](https://github.com/EQuimper/nodejs-api-boilerplate#why-tojson-on-methods-model-)
@@ -42,29 +46,38 @@
 - [Seeds](https://github.com/EQuimper/nodejs-api-boilerplate#seeds)
 - [Docker](https://github.com/EQuimper/nodejs-api-boilerplate#docker)
 - [Techs](https://github.com/EQuimper/nodejs-api-boilerplate#techs)
-- [Todos](https://github.com/EQuimper/nodejs-api-boilerplate#add)
+- [Todo](https://github.com/EQuimper/nodejs-api-boilerplate#todo)
+
+## Installation
+
+1. Clone the project `git clone https://github.com/EQuimper/nodejs-api-boilerplate.git`.
+2. Install dependencies `yarn install` or `npm i`
+3. Create a `.env` file in the root like the `.env.example` file.
+4. For dev you need to have mongodb db locally. [How to?](https://github.com/EQuimper/nodejs-api-boilerplate#install-mongodb)
+
+---
+
+## Install Mongodb
+
+With Homebrew you can just run `brew install mongodb` and after `brew services start mongodb`.
+
+---
+
+## Raven Log
+
+For get raven log create account here: [Sentry](https://sentry.io/)
+
+---
 
 ## Api Doc
 
-Api doc his hosted on surge. [Link](http://equimper-nodejs-api-boilerplate.surge.sh/)
+Api doc his hosted on surge. [Link](http://equimper-nodejs-api-boilerplate.surge.sh/). For change the url and have your own docs just add you link in the `.env` file.
+
+---
 
 ## Pre-Commit Hook
 
 I've add `pre-commit` and `lint-staged` for lint your code before commit. That can maybe take time :bowtie:
-
-## Usage
-
-For get raven log create account here: [Sentry](https://sentry.io/)
-
-1. Clone the project `git clone https://github.com/EQuimper/nodejs-api-boilerplate.git`.
-2. Install dependencies `yarn install` or `npm i`
-3. Create a `.env` file in the root like
-  ```
-  MONGO_URL=yourmongodb
-  JWT_SECRET=yoursecret
-  RAVEN_ID=yourapikey
-  DOCS_WEBSITE=yourwebsite.surge.sh/
-  ```
 
 ---
 
@@ -201,7 +214,8 @@ bash scripts/development.sh
 
 ## Todo
 
-### Add
-
+- [ ] Test seeds controller
 - [ ] Sendgrid or Other Mail supply
 - [ ] Add S3 for user image
+
+# PR are welcome!!! 😃
