@@ -8,6 +8,7 @@ import contants from '../config/constants';
 
 import { filteredBody } from '../utils/filteredBody';
 import Post from '../models/post.model';
+import User from '../models/user.model';
 
 export const validation = {
   create: {
@@ -87,14 +88,22 @@ export const validation = {
  */
 export async function getList(req, res, next) {
   try {
-    return res
-      .status(HTTPStatus.OK)
-      .json(
-        await Post.list({
-          skip: req.query.skip,
-          limit: req.query.limit,
-        }).populate('author'),
-      );
+    const promise = await Promise.all([
+      User.findById(req.user._id),
+      Post.list({ skip: req.query.skip, limit: req.query.limit }),
+    ]);
+
+    const postsWithFavorite = promise[1].reduce((arr, post) => {
+      const favorite = promise[0]._favorites.isPostIsFavorite(post._id);
+      arr.push({
+        ...post.toJSON(),
+        favorite,
+      });
+
+      return arr;
+    }, []);
+
+    return res.status(HTTPStatus.OK).json(postsWithFavorite);
   } catch (err) {
     err.status = HTTPStatus.BAD_REQUEST;
     return next(err);
@@ -114,8 +123,11 @@ export async function getList(req, res, next) {
  * @apiSuccess {String} post._id Post _id.
  * @apiSuccess {String} post.title Post title.
  * @apiSuccess {String} post.text Post text.
- * @apiSuccess {String} post.author Post author id.
+ * @apiSuccess {Object} post.author Post author.
+ * @apiSuccess {String} post.author._id Author id.
+ * @apiSuccess {String} post.author.username Author username.
  * @apiSuccess {String} post.createdAt Post created date.
+ * @apiSuccess {Boolean} favorite User have favorite post
  *
  * @apiParam (Login) {String} pass Only logged in users can do this.
  *
@@ -133,7 +145,11 @@ export async function getList(req, res, next) {
  *  title: 'a title',
  *  text: 'a text',
  *  createdAt: '2017-05-03',
- *  author: '123312'
+ *  author: {
+ *    _id: '123312',
+ *    username: 'Jon'
+ *  },
+ *  favorite: true
  * }
  *
  * @apiErrorExample {json} Post not found
@@ -143,7 +159,15 @@ export async function getList(req, res, next) {
  */
 export async function getById(req, res, next) {
   try {
-    return res.status(HTTPStatus.OK).json(await Post.findById(req.params.id));
+    const promise = await Promise.all([
+      User.findById(req.user._id),
+      Post.findById(req.params.id).populate('author'),
+    ]);
+    const favorite = promise[0]._favorites.isPostIsFavorite(req.params.id);
+    return res.status(HTTPStatus.OK).json({
+      ...promise[1].toJSON(),
+      favorite,
+    });
   } catch (err) {
     err.status = HTTPStatus.BAD_REQUEST;
     return next(err);
@@ -308,6 +332,45 @@ export async function updatePost(req, res, next) {
     });
 
     return res.status(HTTPStatus.OK).json(await post.save());
+  } catch (err) {
+    err.status = HTTPStatus.BAD_REQUEST;
+    return next(err);
+  }
+}
+
+/**
+ * @api {post} /posts/:id/favorite Favorite a post
+ * @apiDescription Favorite a post or unfavorite if already.
+ * @apiName favoritePost
+ * @apiGroup Post
+ *
+ * @apiHeader {Authorization} Authorization JWT Token
+ *
+ * @apiParam {String} id Post unique ID.
+ *
+ * @apiSuccess {Number} status Status of the Request.
+ *
+ * @apiParam (Login) {String} pass Only logged in users can do this.
+ *
+ * @apiHeaderExample {json} Header-Example:
+ * {
+ *  "AUTHORIZATION": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1OTBhMWI3ODAzMDI3N2NiNjQxM2JhZGUiLCJpYXQiOjE0OTM4MzQ2MTZ9.RSlMF6RRwAALZQRdfKrOZWnuHBk-mQNnRcCLJsc8zio"
+ * }
+ *
+ * @apiSuccessExample Success-Response:
+ *
+ * HTTP/1.1 200 OK
+ *
+ * @apiErrorExample {json} Post not found
+ *    HTTP/1.1 404 Not Found
+ * @apiErrorExample {json} Unauthorized
+ *    HTTP/1.1 401 Unauthorized
+ */
+export async function favoritePost(req, res, next) {
+  try {
+    const user = await User.findById(req.user._id);
+    await user._favorites.posts(req.params.id);
+    return res.sendStatus(HTTPStatus.OK);
   } catch (err) {
     err.status = HTTPStatus.BAD_REQUEST;
     return next(err);

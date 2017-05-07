@@ -33,6 +33,7 @@ describe(`POST ${ENDPOINT}`, () => {
           expect(status).to.equal(201);
           expect(body.text).to.equal(testPost.text);
           expect(body.title).to.equal(testPost.title);
+          expect(body.favoriteCount).to.equal(0);
           expect(body.author.toString()).to.equal(testUser._id.toString());
           expect(body).to.haveOwnProperty('_id');
           expect(body).to.haveOwnProperty('createdAt');

@@ -28,6 +28,10 @@ const PostSchema = new Schema(
       ref: 'User',
       required: [true, 'Author is required!'],
     },
+    favoriteCount: {
+      type: Number,
+      default: 0,
+    },
   },
   { timestamps: true },
 );
@@ -74,6 +78,14 @@ PostSchema.statics = {
       .limit(limit)
       .populate('author');
   },
+
+  incFavoriteCount(postId) {
+    return this.findByIdAndUpdate(postId, { $inc: { favoriteCount: 1 } });
+  },
+
+  decFavoriteCount(postId) {
+    return this.findByIdAndUpdate(postId, { $inc: { favoriteCount: -1 } });
+  },
 };
 
 PostSchema.methods = {
@@ -96,6 +108,7 @@ PostSchema.methods = {
       text: this.text,
       author: this.author,
       createdAt: this.createdAt,
+      favoriteCount: this.favoriteCount,
     };
   },
 };

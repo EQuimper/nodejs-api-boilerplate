@@ -36,7 +36,9 @@ describe(`GET ${ENDPOINT}`, () => {
             expect(status).to.equal(200);
             expect(body.title).to.equal(testPost.title);
             expect(body.text).to.equal(testPost.text);
-            expect(body.author).to.equal(testPost.author.toString());
+            expect(body.author._id).to.equal(testUser._id.toString());
+            expect(body.author.username).to.equal(testUser.username);
+            expect(body.author).to.not.haveOwnProperty('password');
             expect(body._id).to.equal(testPost._id.toString());
             expect(body).to.haveOwnProperty('createdAt');
             done();

@@ -209,6 +209,8 @@ bash scripts/development.sh
 - [Chai](https://github.com/chaijs/chai)
 - [Supertest](https://github.com/visionmedia/supertest)
 - [NPS](https://github.com/kentcdodds/nps)
+- [MongoDB](https://www.mongodb.com/)
+- [Mongoose](http://mongoosejs.com/)
 
 ---
 
