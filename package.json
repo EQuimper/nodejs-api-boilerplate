@@ -78,7 +78,7 @@
     "cz-conventional-changelog": "^2.0.0",
     "eslint": "^3.19.0",
     "eslint-config-equimper": "^1.6.4",
-    "eslint-config-prettier": "^1.7.0",
+    "eslint-config-prettier": "^2.0.0",
     "faker": "^4.1.0",
     "glob": "^7.1.1",
     "istanbul": "1.1.0-alpha.1",
