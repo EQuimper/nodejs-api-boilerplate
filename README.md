@@ -74,12 +74,6 @@ For get raven log create account here: [Sentry](https://sentry.io/)
 
 For security have add a whitelist function for your `req.body` coming from the front end. You can take a look of it in the `contants.js` file.
 
----
-
-## Api Doc
-
-Api doc his hosted on surge. [Link](http://equimper-nodejs-api-boilerplate.surge.sh/). For change the url and have your own docs just add you link in the `.env` file.
-
 ```js
 const WHITELIST = {
   posts: {
@@ -91,6 +85,12 @@ const WHITELIST = {
   },
 };
 ```
+
+---
+
+## Api Doc
+
+Api doc his hosted on surge. [Link](http://equimper-nodejs-api-boilerplate.surge.sh/). For change the url and have your own docs just add you link in the `.env` file.
 
 ---
 
