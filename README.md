@@ -49,6 +49,10 @@
 - [Techs](https://github.com/EQuimper/nodejs-api-boilerplate#techs)
 - [Todo](https://github.com/EQuimper/nodejs-api-boilerplate#todo)
 
+## Build
+
+This Boilerplate use webpack 2 to compile code.
+
 ## Installation
 
 1. Clone the project `git clone https://github.com/EQuimper/nodejs-api-boilerplate.git`.
