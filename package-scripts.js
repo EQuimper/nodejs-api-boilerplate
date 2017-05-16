@@ -22,7 +22,7 @@ module.exports = {
     },
     default: {
       description: 'Start project with pm2 on production.',
-      script: `${crossEnv('NODE_ENV=production')} pm2 start dist/index.bundle.js`,
+      script: `${crossEnv('NODE_ENV=production')} pm2 start processes.json dist/index.bundle.js`,
     },
     doc: {
       description: 'Documenting the api.',

@@ -1,5 +1,15 @@
 require('dotenv').config();
 
+const WHITELIST = {
+  posts: {
+    create: ['title', 'text'],
+    update: ['title', 'text'],
+  },
+  users: {
+    create: ['email', 'username', 'password'],
+  },
+};
+
 const devConfig = {
   JWT_SECRET: process.env.JWT_SECRET_DEV,
   MONGO_URL: process.env.MONGO_URL_DEV,
@@ -18,12 +28,7 @@ const prodConfig = {
 const defaultConfig = {
   PORT: process.env.PORT || 3000,
   RAVEN_ID: process.env.RAVEN_ID,
-  WHITELIST: {
-    posts: {
-      create: ['title', 'text'],
-      update: ['title', 'text'],
-    },
-  },
+  WHITELIST,
 };
 
 function envConfig(env) {

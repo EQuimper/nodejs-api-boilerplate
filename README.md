@@ -37,6 +37,7 @@
 - [Installation](https://github.com/EQuimper/nodejs-api-boilerplate#installation)
 - [Install Mongodb](https://github.com/EQuimper/nodejs-api-boilerplate#install-mongodb)
 - [Raven Log](https://github.com/EQuimper/nodejs-api-boilerplate#raven-log)
+- [Body Whitelist](https://github.com/EQuimper/nodejs-api-boilerplate#body-whitelist)
 - [Api Doc](https://github.com/EQuimper/nodejs-api-boilerplate#api-doc)
 - [Pre-Commit Hook](https://github.com/EQuimper/nodejs-api-boilerplate#pre-commit-hook)
 - [Scripts](https://github.com/EQuimper/nodejs-api-boilerplate#scripts)
@@ -69,9 +70,27 @@ For get raven log create account here: [Sentry](https://sentry.io/)
 
 ---
 
+## Body Whitelist
+
+For security have add a whitelist function for your `req.body` coming from the front end. You can take a look of it in the `contants.js` file.
+
+---
+
 ## Api Doc
 
 Api doc his hosted on surge. [Link](http://equimper-nodejs-api-boilerplate.surge.sh/). For change the url and have your own docs just add you link in the `.env` file.
+
+```js
+const WHITELIST = {
+  posts: {
+    create: ['title', 'text'],
+    update: ['title', 'text'],
+  },
+  users: {
+    create: ['email', 'username', 'password'],
+  },
+};
+```
 
 ---
 
@@ -95,7 +114,7 @@ or
 npm run dev
 ```
 
-**PS** That can crash it's the first time but don't worry give it 2 sec the scripts gonna work. He just need to created a dist folder :) This way you have only one command to run.
+**PS** That can crash if this is the first time but don't worry give it 2 sec the scripts gonna work. He just need to created a dist folder :) This way you have only one command to run.
 
 ### DEV-DEBUG
 
@@ -195,7 +214,7 @@ bash scripts/development.sh
 - [Joi](https://github.com/hapijs/joi)
 - [Http-Status](https://github.com/adaltas/node-http-status)
 - [Lint-Staged](https://github.com/okonet/lint-staged)
-- [Pre-Commit](https://github.com/observing/pre-commit)
+- [Husky](https://github.com/typicode/husky)
 - [Prettier](https://github.com/prettier/prettier)
 - [Eslint Config EQuimper](https://github.com/EQuimper/eslint-config-equimper)
 - [Eslint Config Prettier](https://github.com/prettier/eslint-config-prettier)
@@ -211,6 +230,7 @@ bash scripts/development.sh
 - [NPS](https://github.com/kentcdodds/nps)
 - [MongoDB](https://www.mongodb.com/)
 - [Mongoose](http://mongoosejs.com/)
+- [Webpack2](https://webpack.js.org/)
 
 ---
 

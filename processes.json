@@ -5,11 +5,11 @@
       "script": "./dist",
       "merge_logs": true,
       "max_restarts": 20,
-      "instances": 4,
+      "instances": "max",
+      "exec_mode" : "cluster",
       "max_memory_restart": "200M",
-      "env": {
-        "PORT": 3000,
-        "NODE_ENV": "development"
+      "env_production" : {
+        "NODE_ENV": "production"
       }
     }
   ]
