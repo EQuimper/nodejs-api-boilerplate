@@ -5,6 +5,8 @@
 import Joi from 'joi';
 import HTTPStatus from 'http-status';
 
+import { filteredBody } from '../utils/filteredBody';
+import constants from '../config/constants';
 import User from '../models/user.model';
 
 export const validation = {
@@ -51,8 +53,9 @@ export const validation = {
  *  }
  */
 export async function create(req, res, next) {
+  const body = filteredBody(req.body, constants.WHITELIST.users.create);
   try {
-    const user = await User.create(req.body);
+    const user = await User.create(body);
     return res.status(HTTPStatus.CREATED).json(user.toAuthJSON());
   } catch (e) {
     e.status = HTTPStatus.BAD_REQUEST;

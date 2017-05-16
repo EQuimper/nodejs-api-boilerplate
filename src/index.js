@@ -2,7 +2,6 @@
 /**
  * Server setup
  */
-
 import express from 'express';
 
 import './config/database';
@@ -18,17 +17,17 @@ middlewaresConfig(app);
 // Add the apiRoutes stack to the server
 app.use('/api', ApiRoutes);
 
-// http://www.marcusoft.net/2015/10/eaddrinuse-when-watching-tests-with-mocha-and-supertest.html
+// We need this to make sure we don't run a second instance
 if (!module.parent) {
   app.listen(constants.PORT, err => {
     if (err) {
       console.error('Cannot run');
     } else {
       console.log(`
-          Yep this is working 🍺
-          App listen on port: ${constants.PORT} 🍕
-          Env: ${process.env.NODE_ENV} 🦄
-        `);
+        Yep this is working 🍺
+        App listen on port: ${constants.PORT} 🍕
+        Env: ${process.env.NODE_ENV} 🦄
+      `);
     }
   });
 }
