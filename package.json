@@ -62,7 +62,9 @@
     "lint": "nps lint",
     "lint:fix": "nps lint.fix",
     "reportCoverage": "nps reportCoverage",
-    "doc": "nps doc"
+    "doc": "nps doc",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "devDependencies": {
     "apidoc": "^0.17.5",
@@ -121,11 +123,13 @@
     "pretty-error": "^2.1.0",
     "raven": "^2.0.0",
     "slug": "^0.9.1",
-    "winston": "^2.3.1"
+    "winston": "^2.3.1",
+    "snyk": "^1.31.0"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  }
+  },
+  "snyk": true
 }
