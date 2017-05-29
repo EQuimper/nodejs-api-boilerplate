@@ -6,6 +6,6 @@ const routes = new Router();
 
 routes.get('/clear', SeedController.clearAll);
 routes.get('/users/clear', SeedController.clearSeedUsers);
-routes.get('/users/:count', SeedController.seedUsers);
+routes.get('/users/:count?', SeedController.seedUsers);
 
 export default routes;

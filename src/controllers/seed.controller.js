@@ -5,6 +5,7 @@
 import HTTPStatus from 'http-status';
 
 import User from '../models/user.model';
+import Post from '../models/post.model';
 import { userSeed, deleteUserSeed } from '../seeds/user.seed';
 
 export async function seedUsers(req, res, next) {
@@ -13,7 +14,7 @@ export async function seedUsers(req, res, next) {
 
     return res
       .status(HTTPStatus.OK)
-      .send(`User seed success! Created ${req.params.count} users!`);
+      .send(`User seed success! Created ${req.params.count || 10} users!`);
   } catch (e) {
     e.status = HTTPStatus.BAD_REQUEST;
     return next(e);
@@ -41,7 +42,7 @@ export async function clearSeedUsers(req, res, next) {
  */
 export async function clearAll(req, res, next) {
   try {
-    await Promise.all([User.remove()]);
+    await Promise.all([User.remove(), Post.remove()]);
 
     return res.status(HTTPStatus.OK).send('All collections clear');
   } catch (e) {

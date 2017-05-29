@@ -17,11 +17,12 @@ import logErrorService from '../services/log';
 const routes = new Router();
 
 const isDev = process.env.NODE_ENV === 'development';
+const isTest = process.env.NODE_ENV === 'test';
 
 routes.use('/users', UserRoutes);
 routes.use('/posts', PostRoutes);
 
-if (isDev) {
+if (isDev || isTest) {
   routes.use('/seeds', SeedRoutes);
 }
 

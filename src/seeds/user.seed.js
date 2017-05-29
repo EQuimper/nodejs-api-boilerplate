@@ -15,7 +15,7 @@ export async function userSeed(count) {
     return users.push(fakeUser);
   });
 
-  return await Promise.all(await User.create(users));
+  return await User.insertMany(users);
 }
 
 export async function deleteUserSeed() {
