@@ -3710,9 +3710,9 @@ jodid25519@^1.0.0:
   dependencies:
     jsbn "~0.1.0"
 
-joi@^10.4.2:
-  version "10.5.0"
-  resolved "https://registry.yarnpkg.com/joi/-/joi-10.5.0.tgz#4e3172a199c993b36aabe5a987b00b1b541c3059"
+joi@^10.5.1:
+  version "10.5.1"
+  resolved "https://registry.yarnpkg.com/joi/-/joi-10.5.1.tgz#22c608d106c1f7fe18c6f1bf38a228fdf2daab7f"
   dependencies:
     hoek "4.x.x"
     isemail "2.x.x"
@@ -3732,14 +3732,14 @@ js-tokens@^3.0.0:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-3.0.1.tgz#08e9f132484a2c45a30907e9dc4d5567b7f114d7"
 
-js-yaml@3.6.1, js-yaml@3.x, js-yaml@^3.5.1, js-yaml@^3.5.3:
+js-yaml@3.6.1, js-yaml@3.x, js-yaml@^3.5.1:
   version "3.6.1"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.6.1.tgz#6e5fe67d8b205ce4d22fad05b7781e8dadcc4b30"
   dependencies:
     argparse "^1.0.7"
     esprima "^2.6.0"
 
-js-yaml@^3.4.3, js-yaml@^3.7.0:
+js-yaml@^3.4.3, js-yaml@^3.5.3, js-yaml@^3.7.0:
   version "3.8.4"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.8.4.tgz#520b4564f86573ba96662af85a8cafa7b4b5a6f6"
   dependencies:
@@ -4394,9 +4394,9 @@ mkdirp@0.5.1, mkdirp@0.5.x, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdi
   dependencies:
     minimist "0.0.8"
 
-mocha@^3.4.1:
-  version "3.4.1"
-  resolved "https://registry.yarnpkg.com/mocha/-/mocha-3.4.1.tgz#a3802b4aa381934cacb38de70cf771621da8f9af"
+mocha@^3.4.2:
+  version "3.4.2"
+  resolved "https://registry.yarnpkg.com/mocha/-/mocha-3.4.2.tgz#d0ef4d332126dbf18d0d640c9b382dd48be97594"
   dependencies:
     browser-stdout "1.3.0"
     commander "2.9.0"
@@ -4420,19 +4420,19 @@ moment@2.x.x, "moment@>= 2.9.0", moment@^2.15:
   version "2.18.1"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.18.1.tgz#c36193dd3ce1c2eed2adb7c802dbbc77a81b1c0f"
 
-mongodb-core@2.1.10:
-  version "2.1.10"
-  resolved "https://registry.yarnpkg.com/mongodb-core/-/mongodb-core-2.1.10.tgz#eb290681d196d3346a492161aa2ea0905e63151b"
+mongodb-core@2.1.11:
+  version "2.1.11"
+  resolved "https://registry.yarnpkg.com/mongodb-core/-/mongodb-core-2.1.11.tgz#1c38776ceb174997a99c28860eed9028da9b3e1a"
   dependencies:
     bson "~1.0.4"
     require_optional "~1.0.0"
 
-mongodb@2.2.26:
-  version "2.2.26"
-  resolved "https://registry.yarnpkg.com/mongodb/-/mongodb-2.2.26.tgz#1bd50c557c277c98e1a05da38c9839c4922b034a"
+mongodb@2.2.27:
+  version "2.2.27"
+  resolved "https://registry.yarnpkg.com/mongodb/-/mongodb-2.2.27.tgz#34122034db66d983bcf6ab5adb26a24a70fef6e6"
   dependencies:
     es6-promise "3.2.1"
-    mongodb-core "2.1.10"
+    mongodb-core "2.1.11"
     readable-stream "2.2.7"
 
 mongoose-unique-validator@^1.0.5:
@@ -4442,15 +4442,15 @@ mongoose-unique-validator@^1.0.5:
     lodash.foreach "^4.1.0"
     lodash.get "^4.0.2"
 
-mongoose@^4.9.9:
-  version "4.10.2"
-  resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-4.10.2.tgz#c7473ebada5f985cdac8e4182d40776b1aaf5352"
+mongoose@^4.10.4:
+  version "4.10.4"
+  resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-4.10.4.tgz#b9a0a033725e5c29efd9eefb4687d1371956c7b6"
   dependencies:
     async "2.1.4"
     bson "~1.0.4"
     hooks-fixed "2.0.0"
     kareem "1.4.1"
-    mongodb "2.2.26"
+    mongodb "2.2.27"
     mpath "0.2.1"
     mpromise "0.5.5"
     mquery "2.3.1"
