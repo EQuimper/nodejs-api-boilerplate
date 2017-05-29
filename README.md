@@ -239,7 +239,7 @@ bash scripts/development.sh
 
 ## Todo
 
-- [ ] Test seeds controller
+- [x] Test seeds controller - Done by [cpenarrieta](https://github.com/cpenarrieta)
 - [ ] Sendgrid or Other Mail supply
 - [ ] Add S3 for user image
 
