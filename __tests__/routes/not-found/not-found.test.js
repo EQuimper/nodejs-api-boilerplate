@@ -9,46 +9,38 @@ const ENDPOINT = '/api/wrong/path';
  */
 describe(`ALL ${ENDPOINT}`, () => {
   it('should return Not Found message when POST', done => {
-    server
-      .post(ENDPOINT)
-      .end((err, res) => {
-        const { body, status } = res;
-        expect(status).to.equal(404);
-        expect(body.message).to.equal("Not Found!");
-        done();
-      });
+    server.post(ENDPOINT).end((err, res) => {
+      const { body, status } = res;
+      expect(status).to.equal(404);
+      expect(body.message).to.equal('Not Found!');
+      done();
+    });
   });
 
   it('should return Not Found message when GET', done => {
-    server
-      .get(ENDPOINT)
-      .end((err, res) => {
-        const { body, status } = res;
-        expect(status).to.equal(404);
-        expect(body.message).to.equal("Not Found!");
-        done();
-      });
+    server.get(ENDPOINT).end((err, res) => {
+      const { body, status } = res;
+      expect(status).to.equal(404);
+      expect(body.message).to.equal('Not Found!');
+      done();
+    });
   });
 
   it('should return Not Found message when PUT', done => {
-    server
-      .put(ENDPOINT)
-      .end((err, res) => {
-        const { body, status } = res;
-        expect(status).to.equal(404);
-        expect(body.message).to.equal("Not Found!");
-        done();
-      });
+    server.put(ENDPOINT).end((err, res) => {
+      const { body, status } = res;
+      expect(status).to.equal(404);
+      expect(body.message).to.equal('Not Found!');
+      done();
+    });
   });
 
   it('should return Not Found message when DELETE', done => {
-    server
-      .delete(ENDPOINT)
-      .end((err, res) => {
-        const { body, status } = res;
-        expect(status).to.equal(404);
-        expect(body.message).to.equal("Not Found!");
-        done();
-      });
+    server.delete(ENDPOINT).end((err, res) => {
+      const { body, status } = res;
+      expect(status).to.equal(404);
+      expect(body.message).to.equal('Not Found!');
+      done();
+    });
   });
 });

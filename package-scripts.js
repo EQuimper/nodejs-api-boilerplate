@@ -2,19 +2,14 @@ require('dotenv').config();
 
 const npsUtils = require('nps-utils');
 
-const {
-  rimraf,
-  crossEnv,
-  series,
-  concurrent
-} = npsUtils;
+const { rimraf, crossEnv, series, concurrent } = npsUtils;
 
 module.exports = {
   scripts: {
     build: {
       description: 'Building in production environment.',
       default: series.nps('clean', 'build.build'),
-      build: 'webpack -p'
+      build: 'webpack -p',
     },
     clean: {
       description: 'Clean dist folder.',
@@ -74,19 +69,7 @@ module.exports = {
     },
     reportCoverage: {
       description: 'Send report to coveralls.',
-      default: 'coveralls < ./coverage/lcov.info'
-    },
-    commit: {
-      description: 'Commit with commitizen',
-      default: 'git-cz'
-    },
-    release: {
-      description: 'We automate releases with semantic-release. This should only be run on travis',
-      script: series(
-        'semantic-release pre',
-        'npm publish',
-        'semantic-release post'
-      ),
+      default: 'coveralls < ./coverage/lcov.info',
     },
     validate: {
       description: 'Validate code by linting, type-checking.',
