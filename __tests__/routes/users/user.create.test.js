@@ -38,9 +38,7 @@ describe(`POST ${ENDPOINT}`, () => {
         .end((err, res) => {
           const { status, body } = res;
           expect(status).to.equal(400);
-          expect(body.message).to.equal(
-            `User validation failed: email: ${testUser.email} already taken!, username: ${testUser.username} already taken!`,
-          );
+          expect(body).to.haveOwnProperty('message');
           expect(body.errors.username).to.equal(
             `${testUser.username} already taken!`,
           );
