@@ -26,7 +26,7 @@ describe(`POST ${ENDPOINT}`, () => {
     });
   });
 
-  describe('Error with status 404', () => {
+  describe('Error with status 400', () => {
     it('should return an error if email or username are already take', done => {
       server
         .post(ENDPOINT)
@@ -38,7 +38,9 @@ describe(`POST ${ENDPOINT}`, () => {
         .end((err, res) => {
           const { status, body } = res;
           expect(status).to.equal(400);
-          expect(body.message).to.equal('User validation failed');
+          expect(body.message).to.equal(
+            `User validation failed: email: ${testUser.email} already taken!, username: ${testUser.username} already taken!`,
+          );
           expect(body.errors.username).to.equal(
             `${testUser.username} already taken!`,
           );
@@ -86,7 +88,9 @@ describe(`POST ${ENDPOINT}`, () => {
         .end((err, res) => {
           const { status, body } = res;
           expect(status).to.equal(400);
-          expect(body.message).to.equal('User validation failed');
+          expect(body.message).to.equal(
+            'User validation failed: email: user@gmai is not a valid email!',
+          );
           expect(body.errors.email).to.equal('user@gmai is not a valid email!');
           done();
         });
