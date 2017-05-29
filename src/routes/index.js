@@ -25,7 +25,7 @@ if (isDev) {
   routes.use('/seeds', SeedRoutes);
 }
 
-routes.get('*', (req, res, next) =>
+routes.all('*', (req, res, next) =>
   next(new APIError('Not Found!', HTTPStatus.NOT_FOUND, true)),
 );
 
