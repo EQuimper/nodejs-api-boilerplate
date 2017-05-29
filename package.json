@@ -61,7 +61,6 @@
     "lint:fix": "nps lint.fix",
     "reportCoverage": "nps reportCoverage",
     "doc": "nps doc",
-    "contributors:init": "all-contributors init",
     "contributors:add": "all-contributors add",
     "contributors:generate": "all-contributors generate"
   },
@@ -94,7 +93,7 @@
     "shelljs": "^0.7.7",
     "superagent": "^3.5.2",
     "supertest": "^3.0.0",
-    "webpack": "fulls1z3/webpack#v2.5.0-harmony",
+    "webpack": "^2.6.1",
     "webpack-node-externals": "^1.6.0"
   },
   "dependencies": {
