@@ -60,9 +60,13 @@
     "lint": "nps lint",
     "lint:fix": "nps lint.fix",
     "reportCoverage": "nps reportCoverage",
-    "doc": "nps doc"
+    "doc": "nps doc",
+    "contributors:init": "all-contributors init",
+    "contributors:add": "all-contributors add",
+    "contributors:generate": "all-contributors generate"
   },
   "devDependencies": {
+    "all-contributors-cli": "^4.3.0",
     "apidoc": "^0.17.5",
     "babel-cli": "^6.24.1",
     "babel-loader": "^7.0.0",

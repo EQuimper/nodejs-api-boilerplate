@@ -1,0 +1,40 @@
+{
+  "projectName": "nodejs-api-boilerplate",
+  "projectOwner": "EQuimper",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "contributors": [
+    {
+      "login": "EQuimper",
+      "name": "Emanuel Quimper",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/15819498?v=3",
+      "profile": "https://equimper.me/",
+      "contributions": [
+        "question",
+        "blog",
+        "bug",
+        "code",
+        "doc",
+        "example",
+        "infra",
+        "plugin",
+        "review",
+        "test",
+        "tool",
+        "tutorial"
+      ]
+    },
+    {
+      "login": "cpenarrieta",
+      "name": "Cristian Penarrieta",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/1692542?v=3",
+      "profile": "https://medium.com/@cpenarrieta",
+      "contributions": [
+        "test"
+      ]
+    }
+  ]
+}

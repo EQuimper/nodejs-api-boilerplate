@@ -18,6 +18,7 @@
 [![devDependencies Status](https://david-dm.org/equimper/nodejs-api-boilerplate/dev-status.svg?style=flat-square)](https://david-dm.org/equimper/nodejs-api-boilerplate?type=dev)
 [![nps](https://img.shields.io/badge/scripts%20run%20with-nps-blue.svg?style=flat-square)](https://github.com/kentcdodds/nps)
 [![code style equimper](https://img.shields.io/badge/code%20style-equimper-blue.svg?style=flat-square)](https://github.com/EQuimper/eslint-config-equimper)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors)
 
 # NodeJS-API-Boilerplate
 
@@ -243,3 +244,14 @@ bash scripts/development.sh
 - [ ] Add S3 for user image
 
 # PR are welcome!!! 😃
+
+## Contributors
+
+Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+| [<img src="https://avatars0.githubusercontent.com/u/15819498?v=3" width="100px;"/><br /><sub>Emanuel Quimper</sub>](https://equimper.me/)<br />[💬](#question-EQuimper "Answering Questions") [📝](#blog-EQuimper "Blogposts") [🐛](https://github.com/EQuimper/nodejs-api-boilerplate/issues?q=author%3AEQuimper "Bug reports") [💻](https://github.com/EQuimper/nodejs-api-boilerplate/commits?author=EQuimper "Code") [📖](https://github.com/EQuimper/nodejs-api-boilerplate/commits?author=EQuimper "Documentation") [💡](#example-EQuimper "Examples") [🚇](#infra-EQuimper "Infrastructure (Hosting, Build-Tools, etc)") [🔌](#plugin-EQuimper "Plugin/utility libraries") [👀](#review-EQuimper "Reviewed Pull Requests") [⚠️](https://github.com/EQuimper/nodejs-api-boilerplate/commits?author=EQuimper "Tests") [🔧](#tool-EQuimper "Tools") [✅](#tutorial-EQuimper "Tutorials") | [<img src="https://avatars0.githubusercontent.com/u/1692542?v=3" width="100px;"/><br /><sub>Cristian Penarrieta</sub>](https://medium.com/@cpenarrieta)<br />[⚠️](https://github.com/EQuimper/nodejs-api-boilerplate/commits?author=cpenarrieta "Tests") |
+| :---: | :---: |
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!
