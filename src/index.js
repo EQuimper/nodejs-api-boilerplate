@@ -2,10 +2,10 @@
 /**
  * Server setup
  */
-import express from 'express'
+import express from 'express';
 
-import './config/database'
-import middlewaresConfig from './config/middlewares'
+import './config/database';
+import middlewaresConfig from './config/middlewares';
 import constants from './config/constants';
 import ApiRoutes from './routes';
 
