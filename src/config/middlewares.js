@@ -34,7 +34,8 @@ export default app => {
       expressWinston.logger({
         winstonInstance,
         meta: true,
-        msg: 'HTTP {{req.method}} {{req.url}} {{res.statusCode}} {{res.responseTime}}ms',
+        msg:
+          'HTTP {{req.method}} {{req.url}} {{res.statusCode}} {{res.responseTime}}ms',
         colorStatus: true,
       }),
     );

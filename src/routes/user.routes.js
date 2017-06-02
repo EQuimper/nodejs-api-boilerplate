@@ -6,8 +6,7 @@ import { Router } from 'express';
 import validate from 'express-validation';
 
 import * as UserController from '../controllers/user.controller';
-import * as AuthenticationController
-  from '../controllers/authentication.controller';
+import * as AuthenticationController from '../controllers/authentication.controller';
 import { authLocal } from '../services/auth';
 
 const routes = new Router();
