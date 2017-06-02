@@ -242,6 +242,7 @@ bash scripts/development.sh
 - [x] Test seeds controller - Done by [cpenarrieta](https://github.com/cpenarrieta)
 - [ ] Sendgrid or Other Mail supply
 - [ ] Add S3 for user image
+- [ ] Change Mocha for Jest
 
 # PR are welcome!!! 😃
 
