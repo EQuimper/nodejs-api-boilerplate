@@ -91,7 +91,7 @@
     "semantic-release": "^6.3.2",
     "superagent": "^3.5.2",
     "supertest": "^3.0.0",
-    "webpack": "^2.6.1",
+    "webpack": "^3.0.0-rc.1",
     "webpack-node-externals": "^1.6.0"
   },
   "dependencies": {
