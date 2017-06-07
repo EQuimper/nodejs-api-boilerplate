@@ -65,6 +65,8 @@
     "contributors:generate": "all-contributors generate"
   },
   "devDependencies": {
+    "ajv": "^5.1.5",
+    "ajv-keywords": "^2.1.0",
     "all-contributors-cli": "^4.3.0",
     "apidoc": "^0.17.5",
     "babel-cli": "^6.24.1",
@@ -89,10 +91,12 @@
     "nps-utils": "^1.2.0",
     "prettier": "^1.4.2",
     "semantic-release": "^6.3.2",
+    "source-list-map": "2.0.0",
     "superagent": "^3.5.2",
     "supertest": "^3.0.0",
     "webpack": "^3.0.0-rc.1",
-    "webpack-node-externals": "^1.6.0"
+    "webpack-node-externals": "^1.6.0",
+    "webpack-sources": "1.0.1"
   },
   "dependencies": {
     "bcrypt-nodejs": "^0.0.3",
