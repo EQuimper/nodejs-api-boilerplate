@@ -7,7 +7,7 @@
 [![Code Climate](https://img.shields.io/codeclimate/github/EQuimper/nodejs-api-boilerplate.svg?style=flat-square)](https://codeclimate.com/github/EQuimper/nodejs-api-boilerplate)
 [![Coverage Status](https://img.shields.io/coveralls/EQuimper/nodejs-api-boilerplate/master.svg?style=flat-square)](https://coveralls.io/github/EQuimper/nodejs-api-boilerplate?branch=master)
 [![Build Status](https://img.shields.io/travis/EQuimper/nodejs-api-boilerplate/master.svg?style=flat-square)](https://travis-ci.org/EQuimper/nodejs-api-boilerplate)
-[![CircleCI](https://circleci.com/gh/EQuimper/nodejs-api-boilerplate.svg?&style=shield)](https://circleci.com/gh/EQuimper/nodejs-api-boilerplate
+[![CircleCI](https://circleci.com/gh/EQuimper/nodejs-api-boilerplate.svg?&style=shield)](https://circleci.com/gh/EQuimper/nodejs-api-boilerplate)
 [![Greenkeeper badge](https://badges.greenkeeper.io/EQuimper/nodejs-api-boilerplate.svg)](https://greenkeeper.io/)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 [![MIT License](https://img.shields.io/npm/l/stack-overflow-copy-paste.svg?style=flat-square)](http://opensource.org/licenses/MIT)
