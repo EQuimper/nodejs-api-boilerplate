@@ -48,3 +48,7 @@ export async function login(req, res, next) {
 
   return next();
 }
+
+export async function facebookCallback(req, res) {
+  res.status(HTTPStatus.OK).json(req.user.toAuthJSON());
+}

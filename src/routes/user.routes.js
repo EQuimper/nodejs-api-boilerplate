@@ -7,7 +7,7 @@ import validate from 'express-validation';
 
 import * as UserController from '../controllers/user.controller';
 import * as AuthenticationController from '../controllers/authentication.controller';
-import { authLocal } from '../services/auth';
+import { authLocal, authFB } from '../services/auth';
 
 const routes = new Router();
 
@@ -21,6 +21,14 @@ routes.post(
   validate(AuthenticationController.validation.login),
   authLocal,
   AuthenticationController.login,
+);
+
+routes.get('/auth/facebook', authFB);
+
+routes.get(
+  '/auth/facebook/callback',
+  authFB,
+  AuthenticationController.facebookCallback,
 );
 
 export default routes;

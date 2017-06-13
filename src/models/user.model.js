@@ -34,7 +34,7 @@ const UserSchema = new Schema(
     },
     password: {
       type: String,
-      required: [true, 'Password is required!'],
+      // required: [true, 'Password is required!'],
       trim: true,
       minlength: [6, 'Password need to be longer!'],
       validate: {
@@ -42,6 +42,10 @@ const UserSchema = new Schema(
           return password.length >= 6 && password.match(/\d+/g);
         },
       },
+    },
+    providerData: {
+      uid: String,
+      provider: String,
     },
     favorites: {
       posts: [
