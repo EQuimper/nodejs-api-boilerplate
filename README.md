@@ -232,7 +232,7 @@ bash scripts/development.sh
 - [NPS](https://github.com/kentcdodds/nps)
 - [MongoDB](https://www.mongodb.com/)
 - [Mongoose](http://mongoosejs.com/)
-- [Webpack2](https://webpack.js.org/)
+- [Webpack3](https://webpack.js.org/)
 
 ---
 
