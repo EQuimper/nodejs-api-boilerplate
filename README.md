@@ -49,7 +49,7 @@
 
 ## Build
 
-This Boilerplate use webpack 2 to compile code.
+This Boilerplate use webpack 3 to compile code.
 
 ## Installation
 
