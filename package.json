@@ -81,7 +81,7 @@
     "eslint-config-equimper": "^2.1.2",
     "eslint-config-prettier": "^2.2.0",
     "faker": "^4.1.0",
-    "husky": "^0.13.4",
+    "husky": "^0.14.0",
     "istanbul": "1.1.0-alpha.1",
     "lint-staged": "^4.0.0",
     "mocha": "^3.4.2",
