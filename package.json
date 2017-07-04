@@ -38,7 +38,7 @@
   ],
   "license": "MIT",
   "lint-staged": {
-    "*.js": [
+    "src/**/*.js": [
       "yarn prettier",
       "git add"
     ]
