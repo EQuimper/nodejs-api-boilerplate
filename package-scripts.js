@@ -73,7 +73,7 @@ module.exports = {
     },
     validate: {
       description: 'Validate code by linting, type-checking.',
-      default: series.nps('lint', 'test', 'doc.deploy'),
+      default: series.nps('lint', 'test'),
     },
   },
 };
