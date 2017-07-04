@@ -3,6 +3,7 @@
  * Server setup
  */
 import express from 'express';
+import chalk from 'chalk';
 
 import './config/database';
 import middlewaresConfig from './config/middlewares';
@@ -21,13 +22,17 @@ app.use('/api', ApiRoutes);
 if (!module.parent) {
   app.listen(constants.PORT, err => {
     if (err) {
-      console.error('Cannot run');
+      console.log(chalk.red('Cannot run!'));
     } else {
-      console.log(`
+      console.log(
+        chalk.green.bold(
+          `
         Yep this is working 🍺
         App listen on port: ${constants.PORT} 🍕
         Env: ${process.env.NODE_ENV} 🦄
-      `);
+      `,
+        ),
+      );
     }
   });
 }
