@@ -116,7 +116,7 @@
     "method-override": "^2.3.8",
     "mongoose": "^4.11.4",
     "mongoose-unique-validator": "^1.0.5",
-    "passport": "^0.3.2",
+    "passport": "^0.4.0",
     "passport-jwt": "^2.2.1",
     "passport-local": "^1.0.0",
     "pm2": "^2.6.1",
