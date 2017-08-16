@@ -90,7 +90,7 @@
     "nps": "^5.6.0",
     "nps-utils": "^1.2.0",
     "prettier": "^1.5.3",
-    "semantic-release": "^6.3.2",
+    "semantic-release": "^7.0.1",
     "source-list-map": "2.0.0",
     "superagent": "^3.5.2",
     "supertest": "^3.0.0",
