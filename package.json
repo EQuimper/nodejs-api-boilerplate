@@ -67,7 +67,7 @@
   },
   "devDependencies": {
     "ajv": "^5.2.2",
-    "ajv-keywords": "^2.1.0",
+    "ajv-keywords": "^3.0.0",
     "all-contributors-cli": "^4.4.0",
     "apidoc": "^0.17.5",
     "babel-cli": "^6.26.0",
