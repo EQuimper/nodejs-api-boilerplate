@@ -114,7 +114,7 @@
     "joi": "^12.0.0",
     "jsonwebtoken": "^8.0.0",
     "method-override": "^2.3.8",
-    "mongoose": "^4.11.9",
+    "mongoose": "^5.0.0",
     "mongoose-unique-validator": "^1.0.5",
     "passport": "^0.4.0",
     "passport-jwt": "^3.0.0",
