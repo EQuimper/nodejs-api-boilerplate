@@ -84,7 +84,7 @@
     "husky": "^0.14.3",
     "istanbul": "1.1.0-alpha.1",
     "mocha": "^4.0.0",
-    "lint-staged": "^6.0.1",
+    "lint-staged": "^7.0.0",
     "morgan": "^1.8.1",
     "nodemon": "^1.11.0",
     "nps": "^5.7.1",
