@@ -58,9 +58,9 @@ module.exports = {
       seedsClear: 'bash ./scripts/seeds/clearAll.seed.sh',
     },
     test: {
-      default: `${crossEnv('NODE_ENV=test')} mocha $(find __tests__ -name *.test.js) --colors --compilers js:babel-register`,
+      default: `${crossEnv('NODE_ENV=test')} mocha $(find __tests__ -name *.test.js) --colors --require babel-core/register`,
       watch: series.nps('test -w'),
-      cover: `${crossEnv('NODE_ENV=test')} istanbul cover _mocha $(find __tests__ -name *.test.js) -- --compilers js:babel-register --colors --bail --recursive '__tests__/**/*.test.js'`,
+      cover: `${crossEnv('NODE_ENV=test')} istanbul cover _mocha $(find __tests__ -name *.test.js) --require babel-core/register --colors --bail --recursive '__tests__/**/*.test.js'`,
       checkCover: series('nps test.cover', 'istanbul check-coverage'),
     },
     cover: {
