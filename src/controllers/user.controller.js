@@ -12,12 +12,17 @@ import User from '../models/user.model';
 export const validation = {
   create: {
     body: {
-      email: Joi.string().email().required(),
+      email: Joi.string()
+        .email()
+        .required(),
       password: Joi.string()
         .min(6)
         .regex(/^(?=.*[0-9])(?=.*[a-zA-Z])([a-zA-Z0-9]+)$/)
         .required(),
-      username: Joi.string().min(3).max(20).required(),
+      username: Joi.string()
+        .min(3)
+        .max(20)
+        .required(),
     },
   },
 };

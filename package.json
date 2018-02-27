@@ -50,7 +50,7 @@
     "test:watch": "nps test.watch",
     "dev": "nps dev",
     "dev:debug": "nps dev.debug",
-    "prettier": "prettier --single-quote --print-width 80 --trailing-comma all --write '{src,__{tests,mocks}__}/**/*.js'",
+    "prettier": "prettier --write '{src,__{tests,mocks}__}/**/*.js'",
     "precommit": "nps lintStaged && nps validate",
     "checkCover": "nps test.checkCover",
     "cover": "nps test.cover",

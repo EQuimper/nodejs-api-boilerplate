@@ -16,13 +16,16 @@ describe(`POST ${ENDPOINT}`, () => {
 
   describe('Create with status 201', () => {
     it('should return the _id of the user and a token', done => {
-      server.post(ENDPOINT).send(UserFactory.generate()).end((err, res) => {
-        const { status, body } = res;
-        expect(status).to.equal(201);
-        expect(body).to.haveOwnProperty('_id');
-        expect(body).to.haveOwnProperty('token');
-        done();
-      });
+      server
+        .post(ENDPOINT)
+        .send(UserFactory.generate())
+        .end((err, res) => {
+          const { status, body } = res;
+          expect(status).to.equal(201);
+          expect(body).to.haveOwnProperty('_id');
+          expect(body).to.haveOwnProperty('token');
+          done();
+        });
     });
   });
 

@@ -13,7 +13,9 @@ import User from '../models/user.model';
 export const validation = {
   create: {
     body: {
-      title: Joi.string().min(3).required(),
+      title: Joi.string()
+        .min(3)
+        .required(),
       text: Joi.string().required(),
     },
   },
