@@ -66,7 +66,7 @@
     "contributors:generate": "all-contributors generate"
   },
   "devDependencies": {
-    "ajv": "^6.0.0",
+    "ajv": "6.5.3",
     "ajv-keywords": "^3.0.0",
     "all-contributors-cli": "^4.4.0",
     "apidoc": "^0.17.5",
