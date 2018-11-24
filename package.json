@@ -111,7 +111,7 @@
     "express-winston": "^2.4.0",
     "helmet": "^3.8.1",
     "http-status": "^1.0.1",
-    "joi": "^13.0.1",
+    "joi": "^14.1.1",
     "jsonwebtoken": "^8.0.0",
     "method-override": "^2.3.8",
     "mongoose": "^5.0.0",
