@@ -94,7 +94,7 @@
     "source-list-map": "2.0.0",
     "superagent": "^3.6.0",
     "supertest": "^3.0.0",
-    "webpack": "^4.0.0",
+    "webpack": "^4.26.1",
     "webpack-node-externals": "^1.6.0",
     "webpack-sources": "1.0.2"
   },
