@@ -4,12 +4,14 @@ const npsUtils = require('nps-utils');
 
 const { rimraf, crossEnv, series, concurrent } = npsUtils;
 
+const webpackMode = process.env.NODE_ENV ? process.env.NODE_ENV : 'development';
+
 module.exports = {
   scripts: {
     build: {
       description: 'Building in production environment.',
       default: series.nps('clean', 'build.build'),
-      build: 'webpack',
+      build: `webpack --mode ${webpackMode}`,
     },
     clean: {
       description: 'Clean dist folder.',
