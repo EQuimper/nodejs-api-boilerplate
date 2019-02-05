@@ -108,7 +108,7 @@
     "express": "^4.15.4",
     "express-status-monitor": "^1.0.0",
     "express-validation": "^1.0.2",
-    "express-winston": "^2.4.0",
+    "express-winston": "^3.1.0",
     "helmet": "^3.8.1",
     "http-status": "^1.0.1",
     "joi": "^13.0.1",
