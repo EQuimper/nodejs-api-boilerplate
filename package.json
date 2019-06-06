@@ -92,7 +92,7 @@
     "prettier": "^1.6.1",
     "semantic-release": "^15.0.0",
     "source-list-map": "2.0.0",
-    "superagent": "^3.6.0",
+    "superagent": "^5.0.6",
     "supertest": "^3.0.0",
     "webpack": "^4.0.0",
     "webpack-node-externals": "^1.6.0",
