@@ -79,7 +79,7 @@
     "coveralls": "^3.0.0",
     "eslint": "^4.5.0",
     "eslint-config-equimper": "^2.2.1",
-    "eslint-config-prettier": "^2.3.0",
+    "eslint-config-prettier": "^5.1.0",
     "faker": "^4.1.0",
     "husky": "^0.14.3",
     "istanbul": "1.1.0-alpha.1",
