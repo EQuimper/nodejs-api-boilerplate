@@ -77,7 +77,7 @@
     "babel-register": "^6.26.0",
     "chai": "^4.1.1",
     "coveralls": "^3.0.0",
-    "eslint": "^4.5.0",
+    "eslint": "^6.5.0",
     "eslint-config-equimper": "^2.2.1",
     "eslint-config-prettier": "^2.3.0",
     "faker": "^4.1.0",
