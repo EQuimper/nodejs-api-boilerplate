@@ -76,7 +76,7 @@
     "babel-preset-env": "^1.6.0",
     "babel-register": "^6.26.0",
     "chai": "^4.1.1",
-    "coveralls": "^3.0.0",
+    "coveralls": "^3.0.7",
     "eslint": "^4.5.0",
     "eslint-config-equimper": "^2.2.1",
     "eslint-config-prettier": "^2.3.0",
