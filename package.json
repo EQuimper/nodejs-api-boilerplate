@@ -117,7 +117,7 @@
     "mongoose": "^5.0.0",
     "mongoose-unique-validator": "^2.0.0",
     "passport": "^0.4.0",
-    "passport-jwt": "^3.0.0",
+    "passport-jwt": "^4.0.0",
     "passport-local": "^1.0.0",
     "pm2": "^2.6.1",
     "pretty-error": "^2.1.1",
