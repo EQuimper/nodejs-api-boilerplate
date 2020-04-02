@@ -101,7 +101,7 @@
   "dependencies": {
     "bcrypt-nodejs": "^0.0.3",
     "body-parser": "^1.17.1",
-    "chalk": "^3.0.0",
+    "chalk": "^4.0.0",
     "compression": "^1.7.0",
     "cors": "^2.8.4",
     "dotenv": "^5.0.0",
