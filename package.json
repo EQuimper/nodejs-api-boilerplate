@@ -86,7 +86,7 @@
     "mocha": "^5.0.2",
     "lint-staged": "^8.0.0",
     "morgan": "^1.8.1",
-    "nodemon": "^2.0.0",
+    "nodemon": "^2.0.4",
     "nps": "^5.7.1",
     "nps-utils": "^1.3.0",
     "prettier": "^1.6.1",
