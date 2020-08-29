@@ -14,7 +14,7 @@ import APIError from '../services/error';
 // Middlewares
 import logErrorService from '../services/log';
 
-const routes = new Router();
+const routes = Router();
 
 const isDev = process.env.NODE_ENV === 'development';
 const isTest = process.env.NODE_ENV === 'test';
